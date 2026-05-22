@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>European Tipping Guide | Traveller's Reference</title>
+  <meta name="description" content="Detailed tipping customs for restaurants, private transfers, tour guides and hotels across 8 European countries." />
+  <meta property="og:title" content="European Tipping Guide" />
+  <meta property="og:description" content="Tipping customs for France, Italy, Spain, Germany, UK, Greece, Portugal & Netherlands — including private transfers and tour guides." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    /* ── Reset & Tokens ───────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --primary:    #3EE7C6;
+      --secondary:  #7CE9E5;
+      --light:      #B1E9F3;
+      --navy:       #2B4A6F;
+      --navy-dark:  #1e3550;
+      --navy-mid:   #243d5e;
+      --navy-deep:  #1a3050;
+      --white:      #F0FAFE;
+      --muted:      #7aafc8;
+      --faint:      #3d6a8a;
+      --font:       'Raleway', sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font);
+      background: var(--navy);
+      color: var(--white);
+      min-height: 100vh;
+      line-height: 1.5;
+    }
+
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: var(--navy-dark); }
+    ::-webkit-scrollbar-thumb { background: color-mix(in srgb, var(--primary) 35%, transparent); border-radius: 3px; }
+
+    /* ── Hero ─────────────────────────────────────── */
+    .hero {
+      background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy) 60%, #1e3a5a 100%);
+      border-bottom: 1px solid color-mix(in srgb, var(--primary) 30%, transparent);
+      padding: 36px 24px 28px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before, .hero::after {
+      content: '';
+      position: absolute;
+      border-radius: 50%;
+      pointer-events: none;
+    }
+    .hero::before {
+      width: 260px; height: 260px;
+      top: -70px; right: -70px;
+      background: radial-gradient(circle, color-mix(in srgb, var(--primary) 12%, transparent) 0%, transparent 70%);
+    }
+    .hero::after {
+      width: 180px; height: 180px;
+      bottom: -50px; left: 100px;
+      background: radial-gradient(circle, color-mix(in srgb, var(--secondary) 8%, transparent) 0%, transparent 70%);
+    }
+    .hero-inner { max-width: 900px; margin: 0 auto; position: relative; }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: color-mix(in srgb, var(--primary) 15%, transparent);
+      border: 1px solid color-mix(in srgb, var(--primary) 38%, transparent);
+      border-radius: 20px; padding: 4px 14px; margin-bottom: 14px;
+    }
+    .hero-badge-dot {
+      width: 6px; height: 6px; border-radius: 50%;
+      background: var(--primary); display: inline-block;
+    }
+    .hero-badge-text {
+      font-size: 11px; letter-spacing: 0.22em;
+      color: var(--primary); text-transform: uppercase; font-weight: 600;
+    }
+    .hero h1 {
+      font-size: clamp(26px, 5vw, 46px);
+      font-weight: 800; color: var(--white);
+      letter-spacing: -0.03em; line-height: 1.1; margin-bottom: 10px;
+    }
+    .hero h1 span { color: var(--primary); }
+    .hero p { color: var(--muted); font-size: 14px; max-width: 520px; font-weight: 400; }
+
+    /* ── Main wrapper ─────────────────────────────── */
+    .main { max-width: 900px; margin: 0 auto; padding: 24px 16px 40px; }
+
+    /* ── Search + Country Tabs ────────────────────── */
+    .search-input {
+      width: 100%; background: var(--navy-dark);
+      border: 1px solid color-mix(in srgb, var(--primary) 28%, transparent);
+      border-radius: 8px; padding: 10px 16px;
+      color: var(--white); font-size: 14px; font-family: var(--font);
+      font-weight: 500; outline: none; margin-bottom: 12px;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    .search-input::placeholder { color: var(--faint); }
+    .search-input:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px color-mix(in srgb, var(--primary) 14%, transparent);
+    }
+    .country-tabs { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px; }
+    .tab-btn {
+      display: flex; align-items: center; gap: 6px;
+      padding: 7px 14px; border-radius: 6px; cursor: pointer;
+      font-family: var(--font); font-size: 13px; font-weight: 500;
+      border: 1px solid color-mix(in srgb, var(--primary) 22%, transparent);
+      background: var(--navy-dark); color: var(--muted);
+      transition: all 0.18s ease;
+    }
+    .tab-btn:hover { border-color: color-mix(in srgb, var(--primary) 55%, transparent); color: var(--light); }
+    .tab-btn.active {
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: var(--navy); border-color: var(--primary); font-weight: 700;
+    }
+    .tab-flag { font-size: 16px; line-height: 1; }
+
+    /* ── Panel card ───────────────────────────────── */
+    .card {
+      background: var(--navy-dark);
+      border: 1px solid color-mix(in srgb, var(--primary) 28%, transparent);
+      border-radius: 14px; overflow: hidden; margin-bottom: 20px;
+      box-shadow: 0 4px 32px color-mix(in srgb, var(--primary) 6%, transparent);
+    }
+    .card-header {
+      padding: 20px 24px;
+      background: linear-gradient(135deg, var(--navy-mid) 0%, var(--navy-dark) 100%);
+      border-bottom: 1px solid color-mix(in srgb, var(--primary) 22%, transparent);
+      display: flex; align-items: flex-start; gap: 16px;
+    }
+    .country-flag { font-size: 40px; line-height: 1; }
+    .country-meta { flex: 1; }
+    .country-title-row { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin-bottom: 6px; }
+    .country-name { font-size: 22px; font-weight: 700; color: var(--white); letter-spacing: -0.02em; }
+    .currency-badge {
+      background: color-mix(in srgb, var(--primary) 18%, transparent);
+      border: 1px solid color-mix(in srgb, var(--primary) 38%, transparent);
+      color: var(--primary); font-size: 11px; padding: 2px 10px;
+      border-radius: 20px; letter-spacing: 0.08em; font-weight: 600;
+    }
+    .country-culture { color: var(--muted); font-size: 13px; line-height: 1.6; font-weight: 400; }
+
+    /* ── Categories grid ──────────────────────────── */
+    .cat-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1px;
+      background: color-mix(in srgb, var(--primary) 14%, transparent);
+    }
+    .cat-item {
+      background: var(--navy-dark); padding: 15px 20px;
+      cursor: pointer; transition: background 0.15s ease;
+      border-left: 3px solid transparent;
+    }
+    .cat-item:hover { background: color-mix(in srgb, var(--navy-mid) 80%, transparent); }
+    .cat-item.open {
+      background: var(--navy-mid);
+      border-left-color: var(--primary);
+    }
+    .cat-row { display: flex; align-items: center; gap: 10px; }
+    .cat-icon { font-size: 20px; flex-shrink: 0; }
+    .cat-label { font-weight: 500; color: var(--light); font-size: 13px; flex: 1; }
+    .cat-tip { color: var(--primary); font-size: 13px; font-weight: 700; white-space: nowrap; }
+    .cat-detail {
+      margin-top: 8px; padding-top: 8px;
+      border-top: 1px solid color-mix(in srgb, var(--primary) 18%, transparent);
+      color: var(--muted); font-size: 12px; line-height: 1.65; font-weight: 400;
+      display: none;
+    }
+    .cat-item.open .cat-detail { display: block; }
+
+    /* ── Country note ─────────────────────────────── */
+    .card-note {
+      padding: 14px 24px;
+      border-top: 1px solid color-mix(in srgb, var(--primary) 18%, transparent);
+      background: var(--navy-deep);
+      display: flex; gap: 10px; align-items: flex-start;
+    }
+    .note-icon { color: var(--secondary); font-size: 15px; margin-top: 1px; flex-shrink: 0; }
+    .note-text { color: var(--faint); font-size: 12px; line-height: 1.6; font-style: italic; font-weight: 400; }
+
+    /* ── Section headers ──────────────────────────── */
+    .section-header {
+      padding: 18px 24px;
+      border-bottom: 1px solid color-mix(in srgb, var(--primary) 22%, transparent);
+      background: linear-gradient(135deg, var(--navy-mid) 0%, var(--navy-dark) 100%);
+    }
+    .section-header h3 { font-size: 16px; font-weight: 700; color: var(--white); letter-spacing: -0.01em; margin-bottom: 4px; }
+    .section-header p { color: var(--faint); font-size: 12px; font-weight: 400; }
+
+    /* ── Universal transfer grid ──────────────────── */
+    .transfer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 1px;
+      background: color-mix(in srgb, var(--primary) 14%, transparent);
+    }
+    .transfer-item { background: var(--navy-dark); padding: 14px 20px; }
+    .transfer-row { display: flex; align-items: center; gap: 8px; margin-bottom: 5px; }
+    .transfer-icon { font-size: 18px; }
+    .transfer-label { color: var(--light); font-size: 13px; font-weight: 500; }
+    .transfer-range { color: var(--primary); font-size: 14px; font-weight: 700; margin-bottom: 3px; }
+    .transfer-note { color: var(--faint); font-size: 11px; font-weight: 400; }
+
+    /* ── Etiquette tips ───────────────────────────── */
+    .etiquette-pad { padding: 20px 24px; }
+    .etiquette-pad h3 { font-size: 16px; font-weight: 700; color: var(--white); letter-spacing: -0.01em; margin-bottom: 14px; }
+    .etiquette-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 12px;
+    }
+    .etiquette-item {
+      background: var(--navy-deep); border-radius: 8px; padding: 12px 14px;
+      border-left: 3px solid color-mix(in srgb, var(--primary) 55%, transparent);
+    }
+    .etiquette-title { color: var(--primary); font-size: 13px; font-weight: 700; margin-bottom: 4px; }
+    .etiquette-body { color: var(--faint); font-size: 12px; line-height: 1.55; font-weight: 400; }
+
+    /* ── Footer ───────────────────────────────────── */
+    .footer {
+      text-align: center; padding: 16px 0 8px;
+      color: var(--faint); font-size: 11px;
+      letter-spacing: 0.12em; font-weight: 500;
+    }
+
+    /* ── Hidden util ──────────────────────────────── */
+    .hidden { display: none !important; }
+
+    /* ── Responsive ───────────────────────────────── */
+    @media (max-width: 480px) {
+      .card-header { flex-direction: column; gap: 10px; }
+      .country-flag { font-size: 32px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero -->
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="hero-badge">
+        <span class="hero-badge-dot"></span>
+        <span class="hero-badge-text">Traveller's Reference</span>
+      </div>
+      <h1>European <span>Tipping</span> Guide</h1>
+      <p>Customs for restaurants, private transfers, guides &amp; hotels across 8 countries</p>
+    </div>
+  </header>
+
+  <!-- Main content -->
+  <main class="main">
+
+    <!-- Search + tabs -->
+    <input class="search-input" type="text" id="countrySearch" placeholder="Search countries…" autocomplete="off" />
+    <div class="country-tabs" id="countryTabs"></div>
+
+    <!-- Country panel (injected by JS) -->
+    <div id="countryPanel"></div>
+
+    <!-- Universal transfers card -->
+    <div class="card">
+      <div class="section-header">
+        <h3>🌍 Universal Guide: Private Transfers &amp; Tour Guides</h3>
+        <p>General benchmarks that apply broadly across Europe</p>
+      </div>
+      <div class="transfer-grid">
+        <!-- items injected by JS -->
+        <div class="transfer-item">
+          <div class="transfer-row"><span class="transfer-icon">✈️</span><span class="transfer-label">Airport / Port Transfer</span></div>
+          <div class="transfer-range">€5–10 / £5–10</div>
+          <div class="transfer-note">One-way, standard sedan or van</div>
+        </div>
+        <div class="transfer-item">
+          <div class="transfer-row"><span class="transfer-icon">🚐</span><span class="transfer-label">Half-Day Private Transfer</span></div>
+          <div class="transfer-range">€10–15 / £10–15</div>
+          <div class="transfer-note">3–5 hour hire with dedicated driver</div>
+        </div>
+        <div class="transfer-item">
+          <div class="transfer-row"><span class="transfer-icon">🚗</span><span class="transfer-label">Full-Day Private Driver</span></div>
+          <div class="transfer-range">€15–25 / £15–25</div>
+          <div class="transfer-note">8+ hours; includes waiting time and multiple stops</div>
+        </div>
+        <div class="transfer-item">
+          <div class="transfer-row"><span class="transfer-icon">🗺️</span><span class="transfer-label">Multi-Day Driver</span></div>
+          <div class="transfer-range">€15–20/day / £15–20/day</div>
+          <div class="transfer-note">Country touring, road trips; tip at end of last day</div>
+        </div>
+        <div class="transfer-item">
+          <div class="transfer-row"><span class="transfer-icon">🎙️</span><span class="transfer-label">Group Tour Guide</span></div>
+          <div class="transfer-range">€3–8 per person</div>
+          <div class="transfer-note">Shared walking or bus tour, half to full day</div>
+        </div>
+        <div class="transfer-item">
+          <div class="transfer-row"><span class="transfer-icon">🎒</span><span class="transfer-label">Private Guide — Half Day</span></div>
+          <div class="transfer-range">€15–25 per person</div>
+          <div class="transfer-note">3–4 hours, bespoke tour</div>
+        </div>
+        <div class="transfer-item">
+          <div class="transfer-row"><span class="transfer-icon">🏛️</span><span class="transfer-label">Private Guide — Full Day</span></div>
+          <div class="transfer-range">€20–40 per person</div>
+          <div class="transfer-note">6–8 hours; history, wine, food, nature, etc.</div>
+        </div>
+        <div class="transfer-item">
+          <div class="transfer-row"><span class="transfer-icon">🍷</span><span class="transfer-label">Specialist / Expert Guide</span></div>
+          <div class="transfer-range">€30–50+ per person</div>
+          <div class="transfer-note">Sommeliers, archaeologists, former curators, etc.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Etiquette card -->
+    <div class="card">
+      <div class="etiquette-pad">
+        <h3>💡 Universal Etiquette Tips</h3>
+        <div class="etiquette-grid">
+          <div class="etiquette-item">
+            <div class="etiquette-title">Always tip in cash</div>
+            <div class="etiquette-body">Card tips often don't reach staff due to pooling or processing fees.</div>
+          </div>
+          <div class="etiquette-item">
+            <div class="etiquette-title">Tip at the end of service</div>
+            <div class="etiquette-body">For multi-day guides or drivers, present the tip on the final day.</div>
+          </div>
+          <div class="etiquette-item">
+            <div class="etiquette-title">Carry small notes</div>
+            <div class="etiquette-body">€5, €10, and £5 notes are ideal for discreet, personal tipping.</div>
+          </div>
+          <div class="etiquette-item">
+            <div class="etiquette-title">Be discreet</div>
+            <div class="etiquette-body">A folded note in a handshake is more gracious than waving money publicly.</div>
+          </div>
+          <div class="etiquette-item">
+            <div class="etiquette-title">Check the bill first</div>
+            <div class="etiquette-body">Service charge may already be included — look for 'servizio', 'service compris', or 'service charge'.</div>
+          </div>
+          <div class="etiquette-item">
+            <div class="etiquette-title">It's always optional</div>
+            <div class="etiquette-body">No tip is ever legally required in Europe. It is a gesture of appreciation.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      CLICK ANY CATEGORY TO SEE DETAILED GUIDANCE &nbsp;·&nbsp; AMOUNTS ARE GUIDELINES, NOT OBLIGATIONS
+    </div>
+
+  </main>
+
+  <script>
+    const COUNTRIES = [
+      {
+        name:"France", flag:"🇫🇷", currency:"EUR (€)",
+        culture:"Service charge ('service compris') is legally included in all restaurant bills. Additional tipping is a bonus, not expected.",
+        categories:[
+          {icon:"🍽️",label:"Restaurants",tip:"Round up or leave €1–2",detail:"Service is included by law. Rounding up the bill or leaving small coins is appreciated but optional."},
+          {icon:"☕",label:"Cafés & Bars",tip:"Round up coins",detail:"Leave the small change on the table or bar. €0.50–1 is plenty for coffee or drinks."},
+          {icon:"🚕",label:"Taxis / Uber",tip:"Round up to nearest €",detail:"Round up the fare to the nearest euro. For longer trips, rounding up €1–2 is generous."},
+          {icon:"🚌",label:"Private Transfers",tip:"€5–15 per trip",detail:"For airport transfers, €5–10 is standard. For longer or multi-day transfers, €10–15 per driver per day."},
+          {icon:"🎒",label:"Tour Guides",tip:"€10–20 per person/day",detail:"For private guides, €15–20 per person per day. For group tours, €5–10 per person is appreciated."},
+          {icon:"🏨",label:"Hotels",tip:"€1–2 per night / per bag",detail:"Leave €1–2 per night for housekeeping. Tip bellhops €1–2 per bag. Concierge: €5–10 for special services."},
+          {icon:"💆",label:"Spas & Salons",tip:"€5–10 or 10%",detail:"Tipping is not mandatory but 10% for good service is appreciated at upscale spas."},
+          {icon:"🎭",label:"Experiences & Drivers",tip:"€10–20 per person",detail:"For private experiences like wine tours or cooking classes with a driver, €10–20 per person is generous."},
+        ],
+        note:"The French do not tip as much as Americans. Over-tipping can sometimes feel awkward. Keep it modest and genuine."
+      },
+      {
+        name:"Italy", flag:"🇮🇹", currency:"EUR (€)",
+        culture:"Check for 'coperto' (cover charge) and 'servizio' (service charge) on bills. If servizio is included, no additional tip needed.",
+        categories:[
+          {icon:"🍽️",label:"Restaurants",tip:"€2–5 per table",detail:"If servizio (~10–15%) is not included, leaving €2–5 per table is appropriate. Never tip on top of a servizio charge."},
+          {icon:"☕",label:"Cafés & Bars",tip:"€0.10–0.50 coin",detail:"At a bar, it's customary to leave small coins on the bar counter when paying. Even €0.10 is acknowledged."},
+          {icon:"🚕",label:"Taxis",tip:"Round up + €0.50–1",detail:"Round up the fare. For help with luggage, add €0.50–1 per bag. Tipping beyond rounding is not expected."},
+          {icon:"🚌",label:"Private Transfers",tip:"€5–15 per trip",detail:"€5–10 for standard airport runs. For full-day private transfers with a driver, €10–15 is appropriate."},
+          {icon:"🎒",label:"Tour Guides",tip:"€10–15 per person/day",detail:"Private guides: €15–20 per person per day. Group tour guides: €5–10 per person. More for exceptional service."},
+          {icon:"🏨",label:"Hotels",tip:"€1–2 per night / bag",detail:"Housekeeping: €1–2 per night left daily (staff rotate). Porterage: €1–2 per bag. Concierge: €5–20 for theatre tickets, etc."},
+          {icon:"🚣",label:"Gondoliers / Boat Drivers",tip:"€5–10",detail:"For gondola rides, €5–10 on top of the fare shows appreciation, especially for singing or extended tours."},
+          {icon:"🍕",label:"Delivery / Takeaway",tip:"€1–2",detail:"Not expected but appreciated, particularly for longer deliveries. €1–2 is a kind gesture."},
+        ],
+        note:"Italy does not have a strong tipping culture. Small gestures are warmly received; large tips can cause confusion."
+      },
+      {
+        name:"Spain", flag:"🇪🇸", currency:"EUR (€)",
+        culture:"Tipping is entirely discretionary. Spaniards rarely tip, but tourists are generally expected to leave something small.",
+        categories:[
+          {icon:"🍽️",label:"Restaurants",tip:"5–10% or round up",detail:"Locals often leave small coins. Tourists can leave 5–10% for good service. Never tip for mediocre service — it's not obligatory."},
+          {icon:"🍺",label:"Tapas Bars",tip:"Round up coins",detail:"Leave the small change — €0.50–1 per person. Tipping is casual and informal in bar settings."},
+          {icon:"🚕",label:"Taxis",tip:"Round up the fare",detail:"Simply round up the meter fare. For airport trips or help with bags, adding €1–2 is appreciated."},
+          {icon:"🚌",label:"Private Transfers",tip:"€5–10 per trip",detail:"€5 for a standard transfer. For full-day hires, €10–15 is fair. Tip at the end of the service."},
+          {icon:"🎒",label:"Tour Guides",tip:"€5–15 per person/day",detail:"Private guides: €10–15 per person per day. Group tours: €3–5 per person. More for wine country or specialized tours."},
+          {icon:"🏨",label:"Hotels",tip:"€1 per night / bag",detail:"Housekeeping: €1 per night. Bellhop: €1 per bag. Not mandatory but always appreciated, especially in high-end properties."},
+          {icon:"💇",label:"Hairdressers / Beauty",tip:"5–10%",detail:"5–10% for good service at salons. Not customary at budget establishments."},
+          {icon:"⛷️",label:"Ski / Activity Guides",tip:"€10–20 per person",detail:"For ski instructors or adventure guides, €10–20 per person per day based on quality of experience."},
+        ],
+        note:"Spain has one of Europe's lowest tipping cultures. Locals seldom tip. Small gestures are gracious; large tips are unusual."
+      },
+      {
+        name:"Germany", flag:"🇩🇪", currency:"EUR (€)",
+        culture:"Tipping ('Trinkgeld') is customary but modest. The standard is to round up or add 5–10%. You tell the server the total you want to pay.",
+        categories:[
+          {icon:"🍽️",label:"Restaurants",tip:"5–10%",detail:"Tell the server the total you'd like to pay when handing over cash. E.g., bill is €23, say 'Make it €25.' For card payments, add 5–10%."},
+          {icon:"🍺",label:"Beer Halls & Bars",tip:"Round up €0.50–1",detail:"Round up to the nearest euro. Larger tips are uncommon in casual beer halls and pubs."},
+          {icon:"🚕",label:"Taxis",tip:"Round up + 5–10%",detail:"Round up the fare and add about 5–10%. For airport transfers or help with heavy luggage, tip generously."},
+          {icon:"🚌",label:"Private Transfers",tip:"€5–15 per trip",detail:"€5–10 for city transfers. For full-day chauffeur services, €15–20 is appropriate and appreciated."},
+          {icon:"🎒",label:"Tour Guides",tip:"€5–10 per person/day",detail:"For group tours, €3–5 per person. Private guides: €10–15 per person. Tip at end of tour directly."},
+          {icon:"🏨",label:"Hotels",tip:"€1–2 per night / bag",detail:"Housekeeping: €1–2 per night. Porterage: €1–2 per bag. Concierge: €5–10 for booking or arrangements."},
+          {icon:"🛻",label:"Delivery Services",tip:"€1–2",detail:"€1–2 per delivery is considerate, especially in bad weather or for multiple items."},
+          {icon:"💈",label:"Hair & Beauty",tip:"10%",detail:"About 10% is standard at salons. Round up for quick services like a trim."},
+        ],
+        note:"Germans appreciate efficiency and don't expect large tips. The 'round up' method is very common and perfectly acceptable."
+      },
+      {
+        name:"United Kingdom", flag:"🇬🇧", currency:"GBP (£)",
+        culture:"Check your bill for 'discretionary service charge' (10–12.5%). You may legally request its removal. Tips are welcomed but not mandatory.",
+        categories:[
+          {icon:"🍽️",label:"Restaurants",tip:"10–15% if no service charge",detail:"If a service charge is already on the bill, you're covered. If not, 10–15% for good service is standard."},
+          {icon:"🍺",label:"Pubs",tip:"Not customary / offer a drink",detail:"British pub culture doesn't typically involve tipping. Offering 'one for yourself' to the barman is the traditional gesture."},
+          {icon:"🚕",label:"Taxis (Black Cabs)",tip:"10–15%",detail:"Round up or add 10–15%. For licensed black cabs in London, rounding up to the nearest pound plus change is standard."},
+          {icon:"🚌",label:"Private Transfers",tip:"£5–15 per trip",detail:"£5–10 for airport runs. For full-day hires with a chauffeur, £15–25 is generous and appreciated."},
+          {icon:"🎒",label:"Tour Guides",tip:"£5–15 per person/day",detail:"Group tours: £5–10 per person. Private guides: £15–20 per person per day, or more for exceptional service."},
+          {icon:"🏨",label:"Hotels",tip:"£1–2 per night / bag",detail:"Housekeeping: £1–2 per night. Bellhop: £1–2 per bag. Tip directly in cash rather than adding to room charge."},
+          {icon:"💇",label:"Hairdressers",tip:"10–15%",detail:"10–15% is standard. Tip the stylist directly in cash; assistants who wash hair may also receive £1–2."},
+          {icon:"🎭",label:"Private Guides / Experiences",tip:"£10–20 per person",detail:"For private walking tours, food tours, or bespoke experiences, £10–20 per person is a thoughtful gesture."},
+        ],
+        note:"Always check if service is already included. It's perfectly acceptable to ask the server 'is service included?' before tipping."
+      },
+      {
+        name:"Greece", flag:"🇬🇷", currency:"EUR (€)",
+        culture:"Tipping is warmly appreciated but not strictly expected. Cash tips are strongly preferred as card tips may not reach the staff.",
+        categories:[
+          {icon:"🍽️",label:"Restaurants",tip:"5–10% in cash",detail:"Leave cash on the table, even if paying by card. 5–10% is generous. Round up for simple taverna meals."},
+          {icon:"☕",label:"Cafés",tip:"€0.50–1 per drink",detail:"Greeks often leave small change at the café. Rounding up the bill or leaving €1 is appreciated."},
+          {icon:"🚕",label:"Taxis",tip:"Round up + small tip",detail:"Drivers often round up the fare themselves; you can add €0.50–1 on top for good service or luggage help."},
+          {icon:"🚌",label:"Private Transfers",tip:"€5–10 per trip",detail:"For transfers to/from airports or ports, €5–10 is a generous tip. More for longer island transfers."},
+          {icon:"🎒",label:"Tour Guides",tip:"€5–15 per person/day",detail:"Local guides working hard in summer heat especially appreciate tips. €10–15 per person for private tours."},
+          {icon:"🏨",label:"Hotels",tip:"€1–2 per night",detail:"Leave daily in the room in cash. Tip bellhops €1–2 per bag. Boat or resort staff: €2–5 per day."},
+          {icon:"⛵",label:"Boat Captains / Crew",tip:"€5–20 per person",detail:"For private boat tours or charters, tip the captain €10–20 per person for a day trip. More for multi-day charters."},
+          {icon:"🏝️",label:"Resort / Villa Staff",tip:"€2–5 per day",detail:"For villa or resort stays, tip housekeeping, pool staff, and butlers €2–5 per day in cash."},
+        ],
+        note:"Always tip in cash in Greece. Many establishments are cash-only, and card tips rarely reach workers directly."
+      },
+      {
+        name:"Portugal", flag:"🇵🇹", currency:"EUR (€)",
+        culture:"Tipping is appreciated but not obligatory. Portugal has one of the more relaxed tipping cultures in Western Europe.",
+        categories:[
+          {icon:"🍽️",label:"Restaurants",tip:"5–10%",detail:"Rounding up or leaving 5–10% is welcomed. Some restaurants add a couvert (bread/olives charge) — this is not a service charge."},
+          {icon:"☕",label:"Cafés & Pastelarias",tip:"€0.20–0.50 coins",detail:"Leave small change on the counter or table. Even €0.20 is acknowledged with a smile."},
+          {icon:"🚕",label:"Taxis",tip:"Round up fare",detail:"Rounding up to the nearest euro is sufficient. Add €1 for help with bags or during late-night trips."},
+          {icon:"🚌",label:"Private Transfers",tip:"€5–10 per trip",detail:"€5 for standard airport transfers. For full-day drivers, €10–15 is fair."},
+          {icon:"🎒",label:"Tour Guides",tip:"€5–10 per person/day",detail:"Group tours: €3–5 per person. Private guides: €10–15 per person. Sintra and Alentejo winery guides especially appreciate tips."},
+          {icon:"🏨",label:"Hotels",tip:"€1 per night / bag",detail:"Housekeeping: €1 per night. Bellhop: €1 per bag. Smaller and family-run guesthouses appreciate any gesture."},
+          {icon:"🎸",label:"Fado Performers / Musicians",tip:"€2–5",detail:"If you attend a fado dinner, leaving €2–5 per person for performers is customary and appreciative."},
+          {icon:"🏄",label:"Surf / Activity Instructors",tip:"€5–10",detail:"Surf instructors and outdoor guides appreciate €5–10 for good lessons or half-day experiences."},
+        ],
+        note:"Portuguese service workers are often underpaid. Tipping, while not expected, makes a meaningful difference."
+      },
+      {
+        name:"Netherlands", flag:"🇳🇱", currency:"EUR (€)",
+        culture:"The Dutch are famously egalitarian. Tipping is not a cultural expectation, but a 5–10% tip for great service is always well-received.",
+        categories:[
+          {icon:"🍽️",label:"Restaurants",tip:"5–10% for good service",detail:"Not expected, but 5–10% for excellent service is a kind gesture. The Dutch are unlikely to tip for average service."},
+          {icon:"🍻",label:"Bars & Pubs",tip:"Round up or €1",detail:"Rounding up is the norm. Some locals skip tipping entirely at bars; €1 per round for good service is friendly."},
+          {icon:"🚕",label:"Taxis",tip:"Round up + 5%",detail:"Round up the fare. A 5% tip is appreciated but not assumed. Uber/Bolt drivers: round up via app."},
+          {icon:"🚌",label:"Private Transfers",tip:"€5–10 per trip",detail:"For premium transfers, €5–10 is appropriate. Full-day chauffeur: €10–15 at the end of the day."},
+          {icon:"🎒",label:"Tour Guides",tip:"€5–10 per person/day",detail:"Canal boat tours: €2–5 per person. Private city or bike guides: €5–10 per person. Windmill or cheese tours: similar."},
+          {icon:"🏨",label:"Hotels",tip:"€1–2 per service",detail:"Bellhop: €1–2 per bag. Housekeeping: €1–2 per night. Not strictly expected but appreciated at luxury hotels."},
+          {icon:"🚲",label:"Bike Rental / Guides",tip:"€3–5",detail:"For guided bike tours through Amsterdam or the countryside, €5 per person is a considerate tip."},
+          {icon:"🛥️",label:"Canal Boat Operators",tip:"€3–10",detail:"For private canal tours, €5–10 per person depending on the length and quality of the experience."},
+        ],
+        note:"The Netherlands has a strong minimum wage and social safety net. Tipping is truly optional here — never feel obligated."
+      },
+    ];
+
+    // ── State ────────────────────────────────────────
+    let selectedIdx = 0;
+    let openCatKey  = null;
+    let searchTerm  = '';
+
+    // ── Render country tabs ──────────────────────────
+    function renderTabs() {
+      const container = document.getElementById('countryTabs');
+      container.innerHTML = '';
+      COUNTRIES.forEach((c, i) => {
+        if (!c.name.toLowerCase().includes(searchTerm.toLowerCase())) return;
+        const btn = document.createElement('button');
+        btn.className = 'tab-btn' + (i === selectedIdx ? ' active' : '');
+        btn.setAttribute('aria-pressed', i === selectedIdx);
+        btn.innerHTML = `<span class="tab-flag">${c.flag}</span>${c.name}`;
+        btn.addEventListener('click', () => {
+          selectedIdx = i;
+          openCatKey = null;
+          renderTabs();
+          renderPanel();
+        });
+        container.appendChild(btn);
+      });
+    }
+
+    // ── Render country panel ─────────────────────────
+    function renderPanel() {
+      const c = COUNTRIES[selectedIdx];
+      const panel = document.getElementById('countryPanel');
+
+      const catItems = c.categories.map((cat, i) => {
+        const key = `${selectedIdx}-${i}`;
+        const isOpen = openCatKey === key;
+        return `
+          <div class="cat-item${isOpen ? ' open' : ''}" data-key="${key}" role="button" aria-expanded="${isOpen}" tabindex="0">
+            <div class="cat-row">
+              <span class="cat-icon">${cat.icon}</span>
+              <span class="cat-label">${cat.label}</span>
+              <span class="cat-tip">${cat.tip}</span>
+            </div>
+            <div class="cat-detail">${cat.detail}</div>
+          </div>`;
+      }).join('');
+
+      panel.innerHTML = `
+        <div class="card">
+          <div class="card-header">
+            <span class="country-flag">${c.flag}</span>
+            <div class="country-meta">
+              <div class="country-title-row">
+                <span class="country-name">${c.name}</span>
+                <span class="currency-badge">${c.currency}</span>
+              </div>
+              <p class="country-culture">${c.culture}</p>
+            </div>
+          </div>
+          <div class="cat-grid">${catItems}</div>
+          <div class="card-note">
+            <span class="note-icon">ℹ</span>
+            <p class="note-text">${c.note}</p>
+          </div>
+        </div>`;
+
+      // Attach click + keyboard handlers to category items
+      panel.querySelectorAll('.cat-item').forEach(el => {
+        const activate = () => {
+          const key = el.dataset.key;
+          openCatKey = openCatKey === key ? null : key;
+          renderPanel();
+        };
+        el.addEventListener('click', activate);
+        el.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); activate(); } });
+      });
+    }
+
+    // ── Search handler ───────────────────────────────
+    document.getElementById('countrySearch').addEventListener('input', e => {
+      searchTerm = e.target.value;
+      renderTabs();
+    });
+
+    // ── Init ─────────────────────────────────────────
+    renderTabs();
+    renderPanel();
+  </script>
+
+</body>
+</html>
