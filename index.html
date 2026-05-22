@@ -4,569 +4,307 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>European Tipping Guide | Traveller's Reference</title>
-  <meta name="description" content="Detailed tipping customs for restaurants, private transfers, tour guides and hotels across 8 European countries." />
-  <meta property="og:title" content="European Tipping Guide" />
-  <meta property="og:description" content="Tipping customs for France, Italy, Spain, Germany, UK, Greece, Portugal & Netherlands — including private transfers and tour guides." />
-  <meta property="og:type" content="website" />
+  <meta name="description" content="Detailed tipping customs for restaurants, private transfers, tour guides and hotels across Europe." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
   <style>
-    /* ── Reset & Tokens ───────────────────────────── */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
-      --primary:    #3EE7C6;
-      --secondary:  #7CE9E5;
-      --light:      #D6F5FB;
-      --navy:       #1C3A58;
-      --navy-dark:  #162f4a;
-      --navy-mid:   #1e3d5c;
-      --navy-deep:  #122640;
-      --white:      #F4FCFF;
-      --muted:      #90cce0;
-      --faint:      #5a96b8;
-      --font:       'Raleway', sans-serif;
+      --primary:      #3EE7C6;
+      --primary-deep: #0fb89a;
+      --tip-color:    #0a9880;
+      --secondary:    #7CE9E5;
+      --mint-bg:      #f0fbfa;
+      --mint-border:  #c8eef8;
+      --navy:         #1C3A58;
+      --body-text:    #2e5a78;
+      --muted-text:   #4a7a98;
+      --faint-text:   #8ab8cc;
+      --white:        #ffffff;
+      --page-bg:      #f8feff;
+      --font:         'Raleway', sans-serif;
     }
-
     html { scroll-behavior: smooth; }
-
-    body {
-      font-family: var(--font);
-      background: var(--navy);
-      color: var(--white);
-      min-height: 100vh;
-      line-height: 1.5;
-    }
-
+    body { font-family: var(--font); background: var(--page-bg); color: var(--navy); min-height: 100vh; line-height: 1.5; }
     ::-webkit-scrollbar { width: 6px; }
-    ::-webkit-scrollbar-track { background: var(--navy-dark); }
-    ::-webkit-scrollbar-thumb { background: color-mix(in srgb, var(--primary) 35%, transparent); border-radius: 3px; }
+    ::-webkit-scrollbar-track { background: #e8f6fb; }
+    ::-webkit-scrollbar-thumb { background: rgba(62,231,198,0.4); border-radius: 3px; }
 
-    /* ── Hero ─────────────────────────────────────── */
-    .hero {
-      background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy) 60%, #1e3a5a 100%);
-      border-bottom: 1px solid color-mix(in srgb, var(--primary) 30%, transparent);
-      padding: 36px 24px 28px;
-      position: relative;
-      overflow: hidden;
-    }
-    .hero::before, .hero::after {
-      content: '';
-      position: absolute;
-      border-radius: 50%;
-      pointer-events: none;
-    }
-    .hero::before {
-      width: 260px; height: 260px;
-      top: -70px; right: -70px;
-      background: radial-gradient(circle, color-mix(in srgb, var(--primary) 12%, transparent) 0%, transparent 70%);
-    }
-    .hero::after {
-      width: 180px; height: 180px;
-      bottom: -50px; left: 100px;
-      background: radial-gradient(circle, color-mix(in srgb, var(--secondary) 8%, transparent) 0%, transparent 70%);
-    }
+    /* Hero */
+    .hero { background: linear-gradient(135deg, #e6faf6 0%, #f0fbfa 60%, #eaf8fd 100%); border-bottom: 2px solid var(--primary); padding: 32px 24px 24px; position: relative; overflow: hidden; }
+    .hero::before { content:''; position:absolute; width:280px; height:280px; top:-80px; right:-80px; background:radial-gradient(circle,rgba(62,231,198,.15) 0%,transparent 70%); border-radius:50%; pointer-events:none; }
     .hero-inner { max-width: 900px; margin: 0 auto; position: relative; }
-    .hero-badge {
-      display: inline-flex; align-items: center; gap: 8px;
-      background: color-mix(in srgb, var(--primary) 15%, transparent);
-      border: 1px solid color-mix(in srgb, var(--primary) 38%, transparent);
-      border-radius: 20px; padding: 4px 14px; margin-bottom: 14px;
-    }
-    .hero-badge-dot {
-      width: 6px; height: 6px; border-radius: 50%;
-      background: var(--primary); display: inline-block;
-    }
-    .hero-badge-text {
-      font-size: 11px; letter-spacing: 0.22em;
-      color: var(--primary); text-transform: uppercase; font-weight: 600;
-    }
-    .hero h1 {
-      font-size: clamp(26px, 5vw, 46px);
-      font-weight: 800; color: var(--white);
-      letter-spacing: -0.03em; line-height: 1.1; margin-bottom: 10px;
-    }
-    .hero h1 span { color: var(--primary); }
-    .hero p { color: var(--muted); font-size: 14px; max-width: 520px; font-weight: 400; }
+    .hero-badge { display:inline-flex; align-items:center; gap:8px; background:rgba(62,231,198,.18); border:1px solid rgba(62,231,198,.5); border-radius:20px; padding:4px 14px; margin-bottom:12px; }
+    .hero-badge-dot { width:6px; height:6px; border-radius:50%; background:var(--primary-deep); display:inline-block; }
+    .hero-badge-text { font-size:11px; letter-spacing:.22em; color:var(--tip-color); text-transform:uppercase; font-weight:700; }
+    .hero h1 { font-size:clamp(24px,5vw,44px); font-weight:800; color:var(--navy); letter-spacing:-.03em; line-height:1.1; margin-bottom:8px; }
+    .hero h1 span { color:var(--tip-color); }
+    .hero-sub { color:var(--muted-text); font-size:14px; max-width:520px; font-weight:500; margin-bottom:16px; }
 
-    /* ── Main wrapper ─────────────────────────────── */
-    .main { max-width: 900px; margin: 0 auto; padding: 24px 16px 40px; }
+    /* Recent flags bar */
+    .recent-bar { display:flex; align-items:center; gap:10px; min-height:36px; flex-wrap:wrap; }
+    .recent-label { font-size:11px; color:var(--faint-text); font-weight:600; letter-spacing:.08em; text-transform:uppercase; white-space:nowrap; }
+    .recent-flags { display:flex; gap:6px; flex-wrap:wrap; }
+    .recent-flag-btn { display:flex; align-items:center; gap:6px; padding:5px 10px; border-radius:20px; border:1.5px solid var(--mint-border); background:var(--white); cursor:pointer; font-size:13px; font-family:var(--font); font-weight:600; color:var(--navy); transition:all .15s; white-space:nowrap; }
+    .recent-flag-btn:hover { border-color:var(--primary); background:var(--mint-bg); }
+    .recent-flag-btn .rflag { font-size:18px; line-height:1; }
 
-    /* ── Search + Country Tabs ────────────────────── */
-    .search-input {
-      width: 100%; background: var(--navy-dark);
-      border: 1px solid color-mix(in srgb, var(--primary) 28%, transparent);
-      border-radius: 8px; padding: 10px 16px;
-      color: var(--white); font-size: 14px; font-family: var(--font);
-      font-weight: 500; outline: none; margin-bottom: 12px;
-      transition: border-color 0.2s, box-shadow 0.2s;
-    }
-    .search-input::placeholder { color: var(--faint); }
-    .search-input:focus {
-      border-color: var(--primary);
-      box-shadow: 0 0 0 3px color-mix(in srgb, var(--primary) 14%, transparent);
-    }
-    .country-tabs { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px; }
-    .tab-btn {
-      display: flex; align-items: center; gap: 6px;
-      padding: 7px 14px; border-radius: 6px; cursor: pointer;
-      font-family: var(--font); font-size: 13px; font-weight: 500;
-      border: 1px solid color-mix(in srgb, var(--primary) 22%, transparent);
-      background: var(--navy-dark); color: var(--muted);
-      transition: all 0.18s ease;
-    }
-    .tab-btn:hover { border-color: color-mix(in srgb, var(--primary) 55%, transparent); color: var(--light); }
-    .tab-btn.active {
-      background: linear-gradient(135deg, var(--primary), var(--secondary));
-      color: var(--navy); border-color: var(--primary); font-weight: 700;
-    }
-    .tab-flag { font-size: 16px; line-height: 1; }
+    /* Main */
+    .main { max-width:900px; margin:0 auto; padding:24px 16px 40px; }
 
-    /* ── Panel card ───────────────────────────────── */
-    .card {
-      background: var(--navy-dark);
-      border: 1px solid color-mix(in srgb, var(--primary) 28%, transparent);
-      border-radius: 14px; overflow: hidden; margin-bottom: 20px;
-      box-shadow: 0 4px 32px color-mix(in srgb, var(--primary) 6%, transparent);
+    /* Dropdown */
+    .selector-wrap { margin-bottom:20px; }
+    .selector-label { font-size:12px; font-weight:700; color:var(--muted-text); letter-spacing:.08em; text-transform:uppercase; margin-bottom:6px; display:block; }
+    .country-select {
+      width:100%; background:var(--white); border:1.5px solid var(--mint-border);
+      border-radius:8px; padding:10px 16px; color:var(--navy);
+      font-size:14px; font-family:var(--font); font-weight:600;
+      outline:none; cursor:pointer; appearance:none;
+      background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%230a9880' stroke-width='2.5'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+      background-repeat:no-repeat; background-position:right 12px center; padding-right:36px;
+      transition:border-color .2s, box-shadow .2s;
     }
-    .card-header {
-      padding: 20px 24px;
-      background: linear-gradient(135deg, var(--navy-mid) 0%, var(--navy-dark) 100%);
-      border-bottom: 1px solid color-mix(in srgb, var(--primary) 22%, transparent);
-      display: flex; align-items: flex-start; gap: 16px;
-    }
-    .country-flag { font-size: 40px; line-height: 1; }
-    .country-meta { flex: 1; }
-    .country-title-row { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin-bottom: 6px; }
-    .country-name { font-size: 22px; font-weight: 700; color: var(--white); letter-spacing: -0.02em; }
-    .currency-badge {
-      background: color-mix(in srgb, var(--primary) 18%, transparent);
-      border: 1px solid color-mix(in srgb, var(--primary) 38%, transparent);
-      color: var(--primary); font-size: 11px; padding: 2px 10px;
-      border-radius: 20px; letter-spacing: 0.08em; font-weight: 600;
-    }
-    .country-culture { color: var(--muted); font-size: 13px; line-height: 1.6; font-weight: 400; }
+    .country-select:focus { border-color:var(--primary); box-shadow:0 0 0 3px rgba(62,231,198,.15); }
+    .country-select optgroup { font-weight:700; color:var(--tip-color); font-style:normal; }
+    .country-select option { font-weight:500; color:var(--navy); }
 
-    /* ── Categories grid ──────────────────────────── */
-    .cat-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 1px;
-      background: color-mix(in srgb, var(--primary) 14%, transparent);
-    }
-    .cat-item {
-      background: var(--navy-dark); padding: 15px 20px;
-      cursor: pointer; transition: background 0.15s ease;
-      border-left: 3px solid transparent;
-    }
-    .cat-item:hover { background: color-mix(in srgb, var(--navy-mid) 80%, transparent); }
-    .cat-item.open {
-      background: var(--navy-mid);
-      border-left-color: var(--primary);
-    }
-    .cat-row { display: flex; align-items: flex-start; gap: 10px; }
-    .cat-icon { font-size: 20px; flex-shrink: 0; margin-top: 1px; }
-    .cat-text { flex: 1; min-width: 0; }
-    .cat-label { font-weight: 600; color: var(--light); font-size: 13px; display: block; margin-bottom: 2px; }
-    .cat-tip { color: var(--primary); font-size: 12px; font-weight: 700; display: block; line-height: 1.4; }
-    .cat-detail {
-      margin-top: 8px; padding-top: 8px;
-      border-top: 1px solid color-mix(in srgb, var(--primary) 18%, transparent);
-      color: var(--muted); font-size: 12px; line-height: 1.65; font-weight: 400;
-      display: none;
-    }
-    .cat-item.open .cat-detail { display: block; }
+    /* Card */
+    .card { background:var(--white); border:1.5px solid var(--mint-border); border-radius:14px; overflow:hidden; margin-bottom:20px; box-shadow:0 2px 16px rgba(62,231,198,.1); }
+    .card-header { padding:20px 24px; background:linear-gradient(135deg,var(--mint-bg) 0%,var(--white) 100%); border-bottom:1px solid var(--mint-border); display:flex; align-items:flex-start; gap:16px; }
+    .country-flag { font-size:40px; line-height:1; }
+    .country-meta { flex:1; }
+    .country-title-row { display:flex; align-items:center; gap:8px; flex-wrap:wrap; margin-bottom:6px; }
+    .country-name { font-size:22px; font-weight:800; color:var(--navy); letter-spacing:-.02em; }
+    .currency-badge { background:rgba(15,184,154,.12); border:1px solid rgba(15,184,154,.4); color:var(--tip-color); font-size:11px; padding:2px 10px; border-radius:20px; letter-spacing:.08em; font-weight:700; }
+    .group-badge { font-size:10px; padding:2px 8px; border-radius:20px; font-weight:600; letter-spacing:.06em; }
+    .group-eu { background:#e8f0fe; color:#3b5bdb; border:1px solid #bac8ff; }
+    .group-other { background:#f3f0ff; color:#6741d9; border:1px solid #d0bfff; }
+    .group-trans { background:#fff4e6; color:#e8590c; border:1px solid #ffd8a8; }
+    .country-culture { color:var(--body-text); font-size:13px; line-height:1.6; font-weight:400; }
 
-    /* ── Country note ─────────────────────────────── */
-    .card-note {
-      padding: 14px 24px;
-      border-top: 1px solid color-mix(in srgb, var(--primary) 18%, transparent);
-      background: var(--navy-deep);
-      display: flex; gap: 10px; align-items: flex-start;
-    }
-    .note-icon { color: var(--secondary); font-size: 15px; margin-top: 1px; flex-shrink: 0; }
-    .note-text { color: var(--muted); font-size: 12px; line-height: 1.6; font-style: italic; font-weight: 400; }
+    /* Category grid */
+    .cat-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:1px; background:var(--mint-border); }
+    .cat-item { background:var(--white); padding:15px 20px; cursor:pointer; transition:background .15s; border-left:3px solid transparent; }
+    .cat-item:hover { background:var(--mint-bg); }
+    .cat-item.open { background:var(--mint-bg); border-left-color:var(--primary); }
+    .cat-row { display:flex; align-items:flex-start; gap:10px; }
+    .cat-icon { font-size:20px; flex-shrink:0; margin-top:1px; }
+    .cat-text { flex:1; min-width:0; }
+    .cat-label { font-weight:700; color:var(--navy); font-size:13px; display:block; margin-bottom:3px; }
+    .cat-tip { color:var(--tip-color); font-size:12px; font-weight:700; display:block; line-height:1.4; }
+    .cat-detail { margin-top:9px; padding-top:9px; border-top:1px solid var(--mint-border); color:var(--muted-text); font-size:12px; line-height:1.65; font-weight:400; display:none; }
+    .cat-item.open .cat-detail { display:block; }
 
-    /* ── Section headers ──────────────────────────── */
-    .section-header {
-      padding: 18px 24px;
-      border-bottom: 1px solid color-mix(in srgb, var(--primary) 22%, transparent);
-      background: linear-gradient(135deg, var(--navy-mid) 0%, var(--navy-dark) 100%);
-    }
-    .section-header h3 { font-size: 16px; font-weight: 700; color: var(--white); letter-spacing: -0.01em; margin-bottom: 4px; }
-    .section-header p { color: var(--faint); font-size: 12px; font-weight: 400; }
+    /* Note */
+    .card-note { padding:13px 24px; border-top:1px solid var(--mint-border); background:var(--mint-bg); display:flex; gap:10px; align-items:flex-start; }
+    .note-icon { color:var(--primary-deep); font-size:15px; margin-top:1px; flex-shrink:0; }
+    .note-text { color:var(--muted-text); font-size:12px; line-height:1.6; font-style:italic; font-weight:400; }
 
-    /* ── Universal transfer grid ──────────────────── */
-    .transfer-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-      gap: 1px;
-      background: color-mix(in srgb, var(--primary) 14%, transparent);
-    }
-    .transfer-item { background: var(--navy-dark); padding: 14px 20px; }
-    .transfer-row { display: flex; align-items: center; gap: 8px; margin-bottom: 5px; }
-    .transfer-icon { font-size: 18px; }
-    .transfer-label { color: var(--light); font-size: 13px; font-weight: 500; }
-    .transfer-range { color: var(--primary); font-size: 14px; font-weight: 700; margin-bottom: 3px; }
-    .transfer-note { color: var(--muted); font-size: 11px; font-weight: 400; }
+    /* Section header */
+    .section-header { padding:18px 24px; border-bottom:1px solid var(--mint-border); background:linear-gradient(135deg,var(--mint-bg) 0%,var(--white) 100%); }
+    .section-header h3 { font-size:16px; font-weight:800; color:var(--navy); letter-spacing:-.01em; margin-bottom:4px; }
+    .section-header p { color:var(--muted-text); font-size:12px; font-weight:400; }
 
-    /* ── Etiquette tips ───────────────────────────── */
-    .etiquette-pad { padding: 20px 24px; }
-    .etiquette-pad h3 { font-size: 16px; font-weight: 700; color: var(--white); letter-spacing: -0.01em; margin-bottom: 14px; }
-    .etiquette-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-      gap: 12px;
-    }
-    .etiquette-item {
-      background: var(--navy-deep); border-radius: 8px; padding: 12px 14px;
-      border-left: 3px solid color-mix(in srgb, var(--primary) 55%, transparent);
-    }
-    .etiquette-title { color: var(--primary); font-size: 13px; font-weight: 700; margin-bottom: 4px; }
-    .etiquette-body { color: var(--muted); font-size: 12px; line-height: 1.55; font-weight: 400; }
+    /* Transfer grid */
+    .transfer-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(250px,1fr)); gap:1px; background:var(--mint-border); }
+    .transfer-item { background:var(--white); padding:14px 20px; }
+    .transfer-row { display:flex; align-items:center; gap:8px; margin-bottom:5px; }
+    .transfer-icon { font-size:18px; }
+    .transfer-label { color:var(--navy); font-size:13px; font-weight:600; }
+    .transfer-range { color:var(--tip-color); font-size:14px; font-weight:800; margin-bottom:3px; }
+    .transfer-note { color:var(--muted-text); font-size:11px; font-weight:400; }
 
-    /* ── Footer ───────────────────────────────────── */
-    .footer {
-      text-align: center; padding: 16px 0 8px;
-      color: var(--faint); font-size: 11px;
-      letter-spacing: 0.12em; font-weight: 500;
-    }
+    /* Etiquette */
+    .etiquette-pad { padding:20px 24px; }
+    .etiquette-pad h3 { font-size:16px; font-weight:800; color:var(--navy); letter-spacing:-.01em; margin-bottom:14px; }
+    .etiquette-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(240px,1fr)); gap:12px; }
+    .etiquette-item { background:var(--mint-bg); border-radius:8px; padding:12px 14px; border-left:3px solid rgba(15,184,154,.5); }
+    .etiquette-title { color:var(--tip-color); font-size:13px; font-weight:700; margin-bottom:4px; }
+    .etiquette-body { color:var(--muted-text); font-size:12px; line-height:1.55; font-weight:400; }
 
-    /* ── Hidden util ──────────────────────────────── */
-    .hidden { display: none !important; }
+    /* Footer */
+    .footer { text-align:center; padding:16px 0 8px; color:var(--faint-text); font-size:11px; letter-spacing:.12em; font-weight:600; }
 
-    /* ── Responsive ───────────────────────────────── */
-    @media (max-width: 480px) {
-      .card-header { flex-direction: column; gap: 10px; }
-      .country-flag { font-size: 32px; }
-    }
+    @media (max-width:480px) { .card-header { flex-direction:column; gap:10px; } .country-flag { font-size:32px; } }
   </style>
 </head>
 <body>
 
-  <!-- Hero -->
-  <header class="hero">
-    <div class="hero-inner">
-      <div class="hero-badge">
-        <span class="hero-badge-dot"></span>
-        <span class="hero-badge-text">Traveller's Reference</span>
-      </div>
-      <h1>European <span>Tipping</span> Guide</h1>
-      <p>Customs for restaurants, private transfers, guides &amp; hotels across 8 countries</p>
+<header class="hero">
+  <div class="hero-inner">
+    <div class="hero-badge"><span class="hero-badge-dot"></span><span class="hero-badge-text">Traveller's Reference</span></div>
+    <h1>European <span>Tipping</span> Guide</h1>
+    <p class="hero-sub">Customs for restaurants, private transfers, guides &amp; hotels across Europe</p>
+    <div class="recent-bar">
+      <span class="recent-label">Recent:</span>
+      <div class="recent-flags" id="recentFlags"></div>
     </div>
-  </header>
+  </div>
+</header>
 
-  <!-- Main content -->
-  <main class="main">
+<main class="main">
+  <div class="selector-wrap">
+    <label class="selector-label" for="countrySelect">Select a country</label>
+    <select class="country-select" id="countrySelect"></select>
+  </div>
 
-    <!-- Search + tabs -->
-    <input class="search-input" type="text" id="countrySearch" placeholder="Search countries…" autocomplete="off" />
-    <div class="country-tabs" id="countryTabs"></div>
+  <div id="countryPanel"></div>
 
-    <!-- Country panel (injected by JS) -->
-    <div id="countryPanel"></div>
+  <div class="card">
+    <div class="section-header">
+      <h3>&#127758; Universal Guide: Private Transfers &amp; Tour Guides</h3>
+      <p>General benchmarks that apply broadly across Europe</p>
+    </div>
+    <div class="transfer-grid">
+      <div class="transfer-item"><div class="transfer-row"><span class="transfer-icon">&#9992;&#65039;</span><span class="transfer-label">Airport / Port Transfer</span></div><div class="transfer-range">€5–10 / £5–10</div><div class="transfer-note">One-way, standard sedan or van</div></div>
+      <div class="transfer-item"><div class="transfer-row"><span class="transfer-icon">&#128656;</span><span class="transfer-label">Half-Day Private Transfer</span></div><div class="transfer-range">€10–15 / £10–15</div><div class="transfer-note">3–5 hour hire with dedicated driver</div></div>
+      <div class="transfer-item"><div class="transfer-row"><span class="transfer-icon">&#128663;</span><span class="transfer-label">Full-Day Private Driver</span></div><div class="transfer-range">€15–25 / £15–25</div><div class="transfer-note">8+ hours; includes waiting time and multiple stops</div></div>
+      <div class="transfer-item"><div class="transfer-row"><span class="transfer-icon">&#128506;&#65039;</span><span class="transfer-label">Multi-Day Driver</span></div><div class="transfer-range">€15–20/day / £15–20/day</div><div class="transfer-note">Country touring, road trips; tip at end of last day</div></div>
+      <div class="transfer-item"><div class="transfer-row"><span class="transfer-icon">&#127897;&#65039;</span><span class="transfer-label">Group Tour Guide</span></div><div class="transfer-range">€3–8 per person</div><div class="transfer-note">Shared walking or bus tour, half to full day</div></div>
+      <div class="transfer-item"><div class="transfer-row"><span class="transfer-icon">&#127890;</span><span class="transfer-label">Private Guide — Half Day</span></div><div class="transfer-range">€15–25 per person</div><div class="transfer-note">3–4 hours, bespoke tour</div></div>
+      <div class="transfer-item"><div class="transfer-row"><span class="transfer-icon">&#127963;&#65039;</span><span class="transfer-label">Private Guide — Full Day</span></div><div class="transfer-range">€20–40 per person</div><div class="transfer-note">6–8 hours; history, wine, food, nature, etc.</div></div>
+      <div class="transfer-item"><div class="transfer-row"><span class="transfer-icon">&#127863;</span><span class="transfer-label">Specialist / Expert Guide</span></div><div class="transfer-range">€30–50+ per person</div><div class="transfer-note">Sommeliers, archaeologists, former curators, etc.</div></div>
+    </div>
+  </div>
 
-    <!-- Universal transfers card -->
-    <div class="card">
-      <div class="section-header">
-        <h3>🌍 Universal Guide: Private Transfers &amp; Tour Guides</h3>
-        <p>General benchmarks that apply broadly across Europe</p>
-      </div>
-      <div class="transfer-grid">
-        <!-- items injected by JS -->
-        <div class="transfer-item">
-          <div class="transfer-row"><span class="transfer-icon">✈️</span><span class="transfer-label">Airport / Port Transfer</span></div>
-          <div class="transfer-range">€5–10 / £5–10</div>
-          <div class="transfer-note">One-way, standard sedan or van</div>
-        </div>
-        <div class="transfer-item">
-          <div class="transfer-row"><span class="transfer-icon">🚐</span><span class="transfer-label">Half-Day Private Transfer</span></div>
-          <div class="transfer-range">€10–15 / £10–15</div>
-          <div class="transfer-note">3–5 hour hire with dedicated driver</div>
-        </div>
-        <div class="transfer-item">
-          <div class="transfer-row"><span class="transfer-icon">🚗</span><span class="transfer-label">Full-Day Private Driver</span></div>
-          <div class="transfer-range">€15–25 / £15–25</div>
-          <div class="transfer-note">8+ hours; includes waiting time and multiple stops</div>
-        </div>
-        <div class="transfer-item">
-          <div class="transfer-row"><span class="transfer-icon">🗺️</span><span class="transfer-label">Multi-Day Driver</span></div>
-          <div class="transfer-range">€15–20/day / £15–20/day</div>
-          <div class="transfer-note">Country touring, road trips; tip at end of last day</div>
-        </div>
-        <div class="transfer-item">
-          <div class="transfer-row"><span class="transfer-icon">🎙️</span><span class="transfer-label">Group Tour Guide</span></div>
-          <div class="transfer-range">€3–8 per person</div>
-          <div class="transfer-note">Shared walking or bus tour, half to full day</div>
-        </div>
-        <div class="transfer-item">
-          <div class="transfer-row"><span class="transfer-icon">🎒</span><span class="transfer-label">Private Guide — Half Day</span></div>
-          <div class="transfer-range">€15–25 per person</div>
-          <div class="transfer-note">3–4 hours, bespoke tour</div>
-        </div>
-        <div class="transfer-item">
-          <div class="transfer-row"><span class="transfer-icon">🏛️</span><span class="transfer-label">Private Guide — Full Day</span></div>
-          <div class="transfer-range">€20–40 per person</div>
-          <div class="transfer-note">6–8 hours; history, wine, food, nature, etc.</div>
-        </div>
-        <div class="transfer-item">
-          <div class="transfer-row"><span class="transfer-icon">🍷</span><span class="transfer-label">Specialist / Expert Guide</span></div>
-          <div class="transfer-range">€30–50+ per person</div>
-          <div class="transfer-note">Sommeliers, archaeologists, former curators, etc.</div>
-        </div>
+  <div class="card">
+    <div class="etiquette-pad">
+      <h3>&#128161; Universal Etiquette Tips</h3>
+      <div class="etiquette-grid">
+        <div class="etiquette-item"><div class="etiquette-title">Always tip in cash</div><div class="etiquette-body">Card tips often don't reach staff due to pooling or processing fees.</div></div>
+        <div class="etiquette-item"><div class="etiquette-title">Tip at the end of service</div><div class="etiquette-body">For multi-day guides or drivers, present the tip on the final day.</div></div>
+        <div class="etiquette-item"><div class="etiquette-title">Carry small notes</div><div class="etiquette-body">€5, €10, and £5 notes are ideal for discreet, personal tipping.</div></div>
+        <div class="etiquette-item"><div class="etiquette-title">Be discreet</div><div class="etiquette-body">A folded note in a handshake is more gracious than waving money publicly.</div></div>
+        <div class="etiquette-item"><div class="etiquette-title">Check the bill first</div><div class="etiquette-body">Service charge may already be included — look for 'servizio', 'service compris', or 'service charge'.</div></div>
+        <div class="etiquette-item"><div class="etiquette-title">It's always optional</div><div class="etiquette-body">No tip is ever legally required in Europe. It is a gesture of appreciation.</div></div>
       </div>
     </div>
+  </div>
 
-    <!-- Etiquette card -->
-    <div class="card">
-      <div class="etiquette-pad">
-        <h3>💡 Universal Etiquette Tips</h3>
-        <div class="etiquette-grid">
-          <div class="etiquette-item">
-            <div class="etiquette-title">Always tip in cash</div>
-            <div class="etiquette-body">Card tips often don't reach staff due to pooling or processing fees.</div>
-          </div>
-          <div class="etiquette-item">
-            <div class="etiquette-title">Tip at the end of service</div>
-            <div class="etiquette-body">For multi-day guides or drivers, present the tip on the final day.</div>
-          </div>
-          <div class="etiquette-item">
-            <div class="etiquette-title">Carry small notes</div>
-            <div class="etiquette-body">€5, €10, and £5 notes are ideal for discreet, personal tipping.</div>
-          </div>
-          <div class="etiquette-item">
-            <div class="etiquette-title">Be discreet</div>
-            <div class="etiquette-body">A folded note in a handshake is more gracious than waving money publicly.</div>
-          </div>
-          <div class="etiquette-item">
-            <div class="etiquette-title">Check the bill first</div>
-            <div class="etiquette-body">Service charge may already be included — look for 'servizio', 'service compris', or 'service charge'.</div>
-          </div>
-          <div class="etiquette-item">
-            <div class="etiquette-title">It's always optional</div>
-            <div class="etiquette-body">No tip is ever legally required in Europe. It is a gesture of appreciation.</div>
-          </div>
-        </div>
-      </div>
-    </div>
+  <div class="footer">CLICK ANY CATEGORY TO SEE DETAILED GUIDANCE &nbsp;&middot;&nbsp; AMOUNTS ARE GUIDELINES, NOT OBLIGATIONS</div>
+</main>
 
-    <div class="footer">
-      CLICK ANY CATEGORY TO SEE DETAILED GUIDANCE &nbsp;·&nbsp; AMOUNTS ARE GUIDELINES, NOT OBLIGATIONS
-    </div>
+<script>
+const COUNTRIES = [
+  {name:"Austria",flag:"🇦🇹",currency:"EUR (€)",group:"eu",culture:"Tipping ('Trinkgeld') is expected in Austria. 5–10% at restaurants is the norm, and rounding up for taxis and cafés is standard practice.",categories:[{icon:"🍽️",label:"Restaurants",tip:"5–10%",detail:"5–10% is customary. Tell the server the total you'd like to pay when settling the bill in cash."},{icon:"☕",label:"Cafés & Coffeehouses",tip:"Round up + €0.50–1",detail:"Vienna's famous coffeehouses expect a small tip — round up and add €0.50–1 for table service."},{icon:"🚕",label:"Taxis",tip:"Round up + 5–10%",detail:"Round up the fare and add 5–10%. For airport transfers, €2–3 extra is appreciated."},{icon:"🚌",label:"Private Transfers",tip:"€5–15 per trip",detail:"€5–10 for standard transfers. For full-day chauffeur hire, €15–20 is appropriate."},{icon:"🎒",label:"Tour Guides",tip:"€5–15 per person/day",detail:"Group tours: €3–5 per person. Private guides: €10–15 per person per day."},{icon:"🏨",label:"Hotels",tip:"€1–2 per night / bag",detail:"Housekeeping: €1–2 per night. Bellhop: €1–2 per bag. Concierge: €5–10 for special services."},{icon:"🎭",label:"Opera & Event Staff",tip:"€1–2",detail:"Coat check and programme sellers in Vienna's opera houses typically receive €1–2."},{icon:"💆",label:"Spas & Salons",tip:"5–10%",detail:"5–10% at quality spas and salons. Less expected at budget establishments."}],note:"Austria has a well-established tipping culture similar to Germany. Locals always tip at restaurants and cafés — it's considered rude not to."},
+  {name:"Belgium",flag:"🇧🇪",currency:"EUR (€)",group:"eu",culture:"Service charge is usually included in Belgian restaurant bills. Tipping is discretionary but a small gesture is appreciated for exceptional service.",categories:[{icon:"🍽️",label:"Restaurants",tip:"Round up or 5–10%",detail:"Check if service is included. If not, 5–10% for good service. Rounding up to the nearest €5 is common."},{icon:"☕",label:"Cafés & Bars",tip:"Round up coins",detail:"Leave small change on the table. €0.50–1 for table service is a friendly gesture."},{icon:"🚕",label:"Taxis",tip:"Round up + 5%",detail:"Round up the fare and add a small tip. Taxis in Brussels often expect a 5–10% gratuity."},{icon:"🚌",label:"Private Transfers",tip:"€5–10 per trip",detail:"€5–10 for airport runs. For full-day hire, €10–15 at the end of the day."},{icon:"🎒",label:"Tour Guides",tip:"€5–10 per person/day",detail:"Group tours of Brussels, Bruges, or Ghent: €3–5 per person. Private guides: €10–15."},{icon:"🏨",label:"Hotels",tip:"€1–2 per night / bag",detail:"Housekeeping: €1–2 per night. Bellhop: €1–2 per bag. Not mandatory but appreciated."},{icon:"🍺",label:"Beer Bars",tip:"Round up",detail:"Belgium's famous beer bars — leave the small change. €1 for knowledgeable bar staff is kind."},{icon:"💇",label:"Hair & Beauty",tip:"5–10%",detail:"5–10% for good service at salons. Round up for a quick trim."}],note:"Belgium has a moderate tipping culture. Service staff are generally well-paid, so tipping is genuinely optional — but always appreciated."},
+  {name:"Bulgaria",flag:"🇧🇬",currency:"BGN (лв)",group:"eu",culture:"Tipping is expected and appreciated in Bulgaria, especially in tourist areas. 10% is the standard for restaurants.",categories:[{icon:"🍽️",label:"Restaurants",tip:"10%",detail:"10% is the widely accepted standard. Leave cash directly with the server rather than adding to the card payment."},{icon:"☕",label:"Cafés & Bars",tip:"Round up or 10%",detail:"Rounding up is common. For table service, 10% is appreciated."},{icon:"🚕",label:"Taxis",tip:"Round up + 5–10%",detail:"Always agree on a fare before starting. Round up and add a small tip for honest drivers."},{icon:"🚌",label:"Private Transfers",tip:"5–10 лв per trip",detail:"Around 5–10 BGN for airport transfers. More for longer trips or helpful drivers."},{icon:"🎒",label:"Tour Guides",tip:"5–15 лв per person",detail:"Group tours: 5 BGN per person. Private guides: 10–15 BGN per person per day."},{icon:"🏨",label:"Hotels",tip:"2–5 лв per night / bag",detail:"Housekeeping: 2–5 BGN per night. Bellhop: 1–2 BGN per bag."},{icon:"🏖️",label:"Beach & Resort Staff",tip:"2–5 лв",detail:"Sun lounger attendants, beach bars, and pool staff appreciate 2–5 BGN."},{icon:"💆",label:"Spas & Salons",tip:"10%",detail:"10% for massages and treatments. Hairdressers: round up or 10%."}],note:"Bulgaria is one of Europe's more affordable destinations. Tipping in BGN (lev) is important — staff wages are often low and tips make a real difference."},
+  {name:"Croatia",flag:"🇭🇷",currency:"EUR (€)",group:"eu",culture:"Tipping is customary in Croatia, particularly along the Dalmatian coast and in tourist areas. 10–15% is standard at restaurants.",categories:[{icon:"🍽️",label:"Restaurants",tip:"10–15%",detail:"10–15% is the norm in tourist areas. In local konoba restaurants, rounding up is fine."},{icon:"☕",label:"Cafés",tip:"Round up",detail:"Rounding up to the nearest euro is appreciated. Café culture is important in Croatia."},{icon:"🚕",label:"Taxis",tip:"Round up + 5–10%",detail:"Round up the fare. Insist on the meter being used in popular tourist cities like Dubrovnik."},{icon:"🚌",label:"Private Transfers",tip:"€5–10 per trip",detail:"€5–10 for airport or port transfers. For day trip drivers, €10–15 is appropriate."},{icon:"🎒",label:"Tour Guides",tip:"€5–15 per person/day",detail:"Dubrovnik and Split guides: €5–10 per person for group tours. Private guides: €10–20."},{icon:"🏨",label:"Hotels",tip:"€1–2 per night / bag",detail:"Housekeeping: €1–2 per night. Bellhop: €1 per bag. Tip in cash."},{icon:"⛵",label:"Boat Charter Crew",tip:"€10–20 per person",detail:"For sailing charters or private boat tours, tip the skipper and crew €10–20 per person per day."},{icon:"🏖️",label:"Beach Clubs & Staff",tip:"€2–5",detail:"Beach bar staff and sunbed attendants appreciate €2–5 especially on private beaches."}],note:"Croatia is now on the euro. Cash tips are strongly preferred — always tip your boat skipper separately as it's a maritime tradition."},
+  {name:"Cyprus",flag:"🇨🇾",currency:"EUR (€)",group:"eu",culture:"Tipping is common in Cyprus, especially in tourist resorts. 10% is standard at restaurants; service charge is sometimes included.",categories:[{icon:"🍽️",label:"Restaurants",tip:"10% (check bill first)",detail:"Check for a service charge first. If not included, 10% is standard. Leave cash even if paying by card."},{icon:"☕",label:"Cafés & Bars",tip:"Round up or 10%",detail:"Rounding up is appreciated. Traditional kafenions expect small coins as tips."},{icon:"🚕",label:"Taxis",tip:"Round up + €1–2",detail:"Agree the fare beforehand or insist on the meter. Add €1–2 for a courteous driver."},{icon:"🚌",label:"Private Transfers",tip:"€5–10 per trip",detail:"€5–10 for airport transfers. For full-day hire, €10–15 at the end."},{icon:"🎒",label:"Tour Guides",tip:"€5–10 per person/day",detail:"Group tours to Troodos or Paphos: €5 per person. Private guides: €10–15."},{icon:"🏨",label:"Hotels & Resorts",tip:"€1–2 per night / bag",detail:"Housekeeping: €1–2 per night. Bellhop: €1 per bag. Pool and beach staff: €1–2 per day."},{icon:"🏖️",label:"Beach & Resort Staff",tip:"€1–3 per day",detail:"Sunbed staff, pool attendants, and bar staff at resorts appreciate €1–3 per day."},{icon:"💆",label:"Spas",tip:"10%",detail:"10% for spa treatments and massages at resort spas."}],note:"Cyprus has a relaxed tipping culture. In the north (Turkish Cyprus), tipping in local currency is preferred. Always tip in cash at restaurants."},
+  {name:"Czechia",flag:"🇨🇿",currency:"CZK (Kč)",group:"eu",culture:"Tipping is expected in the Czech Republic. 10% is the norm at restaurants. Always tip in cash — card tips often don't reach staff.",categories:[{icon:"🍽️",label:"Restaurants",tip:"10%",detail:"10% is standard. When paying cash, tell the server the rounded-up total you wish to pay rather than waiting for change."},{icon:"🍺",label:"Beer Halls & Bars",tip:"Round up 5–10%",detail:"In traditional Czech hospoda pubs, rounding up the tab is customary. Leave coins on the table."},{icon:"🚕",label:"Taxis",tip:"Round up + 10%",detail:"Use licensed taxis or apps. Round up and add 10%. Avoid unlicensed taxis near tourist areas."},{icon:"🚌",label:"Private Transfers",tip:"100–200 Kč per trip",detail:"100–200 CZK for airport transfers. For full-day hire, 200–400 CZK is appropriate."},{icon:"🎒",label:"Tour Guides",tip:"100–200 Kč per person",detail:"Group tours in Prague: 50–100 CZK per person. Private guides: 150–300 CZK per person per day."},{icon:"🏨",label:"Hotels",tip:"50–100 Kč per night / bag",detail:"Housekeeping: 50–100 CZK per night. Bellhop: 20–50 CZK per bag. Leave daily, not at checkout."},{icon:"🎭",label:"Classical Music & Shows",tip:"20–50 Kč",detail:"Prague's classical concert ushers and coat check staff typically receive 20–50 CZK."},{icon:"💆",label:"Spas & Salons",tip:"10%",detail:"10% for spa treatments. Hairdressers: round up or 10%."}],note:"Prague is very tourist-friendly but be cautious of overcharging. Always agree on a price beforehand for taxis, and keep small denomination notes for tipping."},
+  {name:"Denmark",flag:"🇩🇰",currency:"DKK (kr)",group:"eu",culture:"Denmark has a low tipping culture. Service is included in prices by law, and staff earn high wages. Tipping is a gesture, not an obligation.",categories:[{icon:"🍽️",label:"Restaurants",tip:"Round up or 5–10%",detail:"Not expected but appreciated. Round up the bill or add 5–10% for exceptional service. No pressure."},{icon:"☕",label:"Cafés & Bars",tip:"Not customary",detail:"Danes rarely tip at cafés or bars. Rounding up the total is the maximum gesture expected."},{icon:"🚕",label:"Taxis",tip:"Round up the fare",detail:"Rounding up to the nearest 10 DKK is sufficient. Adding 10% is generous and appreciated."},{icon:"🚌",label:"Private Transfers",tip:"50–100 kr per trip",detail:"50–100 DKK for airport runs. For full-day private hire, 100–200 DKK is a fair gesture."},{icon:"🎒",label:"Tour Guides",tip:"50–100 kr per person",detail:"Group tours: 20–50 DKK per person. Private guides: 100–200 DKK per person per day."},{icon:"🏨",label:"Hotels",tip:"20–50 kr per night / bag",detail:"Housekeeping: 20–50 DKK per night. Bellhop: 20 DKK per bag. Truly optional here."},{icon:"🍣",label:"Smørrebrød & Specialty Dining",tip:"5–10%",detail:"At high-end New Nordic restaurants, 5–10% for excellent service is increasingly appreciated."},{icon:"🚲",label:"Bike Tour Guides",tip:"50–100 kr",detail:"Copenhagen's popular cycling tours: 50–100 DKK per person for a good guide."}],note:"Denmark is an egalitarian society with high minimum wages. Staff are well paid and tipping is a genuine bonus, not an expectation. Never feel pressured."},
+  {name:"Estonia",flag:"🇪🇪",currency:"EUR (€)",group:"eu",culture:"Tipping is not deeply embedded in Estonian culture but is growing in tourist areas. 10% is appreciated at restaurants in Tallinn's old town.",categories:[{icon:"🍽️",label:"Restaurants",tip:"10% in tourist areas",detail:"10% is appreciated in Tallinn. Outside tourist zones, rounding up is sufficient."},{icon:"☕",label:"Cafés",tip:"Round up",detail:"Leave the small change. Rounding up to the nearest euro is a friendly gesture."},{icon:"🚕",label:"Taxis",tip:"Round up",detail:"Use Bolt (local app) — fixed prices. Round up the fare. Tipping is not expected."},{icon:"🚌",label:"Private Transfers",tip:"€3–8 per trip",detail:"€3–5 for Tallinn city runs. €5–10 for longer transfers or tour driver days."},{icon:"🎒",label:"Tour Guides",tip:"€5–10 per person/day",detail:"Tallinn old town tours: €5 per person. Private guides: €10–15 per person per day."},{icon:"🏨",label:"Hotels",tip:"€1–2 per night / bag",detail:"Housekeeping and bellhop tips are appreciated but not expected. €1–2 is generous."},{icon:"🎸",label:"Live Music Venues",tip:"€1–2 per round",detail:"At music bars and jazz clubs, €1–2 for bar service during live acts is appreciated."},{icon:"🧖",label:"Spa & Wellness",tip:"5–10%",detail:"Estonia has a strong sauna culture. Tip spa staff 5–10% for quality treatments."}],note:"Estonia is increasingly tourist-savvy but remains a low-tip culture. Locals rarely tip — your gesture will be genuinely appreciated."},
+  {name:"Finland",flag:"🇫🇮",currency:"EUR (€)",group:"eu",culture:"Finland has very little tipping culture. Staff are well paid and tipping is unusual. Rounding up is the most you'd normally do.",categories:[{icon:"🍽️",label:"Restaurants",tip:"Round up or skip",detail:"Tipping is not expected. Rounding up the bill or leaving €1–2 for excellent service is appreciated but rare."},{icon:"☕",label:"Cafés & Bars",tip:"Not customary",detail:"No expectation to tip at cafés or bars. Finns almost never tip in these settings."},{icon:"🚕",label:"Taxis",tip:"Round up",detail:"Round up to the nearest euro or 5-euro increment. No obligation to tip."},{icon:"🚌",label:"Private Transfers",tip:"€3–8 per trip",detail:"€3–5 for Helsinki city runs. €5–10 for longer airport or tour transfers."},{icon:"🎒",label:"Tour Guides",tip:"€5–10 per person/day",detail:"Group tours: €3–5 per person. Private guides: €8–12 per person per day."},{icon:"🏨",label:"Hotels",tip:"€1–2 per service",detail:"Truly optional. If you leave anything for housekeeping or bellhop, €1–2 is fine."},{icon:"🧖",label:"Sauna & Spa",tip:"Optional €2–5",detail:"Finland is the home of sauna. Tip sauna masters or spa staff €2–5 for a special experience."},{icon:"🎿",label:"Activity / Ski Guides",tip:"€5–10",detail:"For guided hikes, ski tours, or northern lights trips, €5–10 per person is a kind gesture."}],note:"Finland has the highest trust in institutions in Europe and strong social equality. Tipping is rare and never expected — don't feel awkward skipping it."},
+  {name:"France",flag:"🇫🇷",currency:"EUR (€)",group:"eu",culture:"Service charge ('service compris') is legally included in all restaurant bills. Additional tipping is a bonus, not expected.",categories:[{icon:"🍽️",label:"Restaurants",tip:"Round up or leave €1–2",detail:"Service is included by law. Rounding up the bill or leaving small coins is appreciated but optional."},{icon:"☕",label:"Cafés & Bars",tip:"Round up coins",detail:"Leave the small change on the table or bar. €0.50–1 is plenty for coffee or drinks."},{icon:"🚕",label:"Taxis / Uber",tip:"Round up to nearest €",detail:"Round up the fare to the nearest euro. For longer trips, rounding up €1–2 is generous."},{icon:"🚌",label:"Private Transfers",tip:"€5–15 per trip",detail:"For airport transfers, €5–10 is standard. For longer or multi-day transfers, €10–15 per driver per day."},{icon:"🎒",label:"Tour Guides",tip:"€10–20 per person/day",detail:"For private guides, €15–20 per person per day. For group tours, €5–10 per person is appreciated."},{icon:"🏨",label:"Hotels",tip:"€1–2 per night / per bag",detail:"Leave €1–2 per night for housekeeping. Tip bellhops €1–2 per bag. Concierge: €5–10 for special services."},{icon:"💆",label:"Spas & Salons",tip:"€5–10 or 10%",detail:"Tipping is not mandatory but 10% for good service is appreciated at upscale spas."},{icon:"🎭",label:"Experiences & Drivers",tip:"€10–20 per person",detail:"For private experiences like wine tours or cooking classes with a driver, €10–20 per person is generous."}],note:"The French do not tip as much as Americans. Over-tipping can sometimes feel awkward. Keep it modest and genuine."},
+  {name:"Germany",flag:"🇩🇪",currency:"EUR (€)",group:"eu",culture:"Tipping ('Trinkgeld') is customary but modest. The standard is to round up or add 5–10%. You tell the server the total you want to pay.",categories:[{icon:"🍽️",label:"Restaurants",tip:"5–10%",detail:"Tell the server the total you'd like to pay when handing over cash. E.g., bill is €23, say 'Make it €25.' For card payments, add 5–10%."},{icon:"🍺",label:"Beer Halls & Bars",tip:"Round up €0.50–1",detail:"Round up to the nearest euro. Larger tips are uncommon in casual beer halls and pubs."},{icon:"🚕",label:"Taxis",tip:"Round up + 5–10%",detail:"Round up the fare and add about 5–10%. For airport transfers or help with heavy luggage, tip generously."},{icon:"🚌",label:"Private Transfers",tip:"€5–15 per trip",detail:"€5–10 for city transfers. For full-day chauffeur services, €15–20 is appropriate and appreciated."},{icon:"🎒",label:"Tour Guides",tip:"€5–10 per person/day",detail:"For group tours, €3–5 per person. Private guides: €10–15 per person. Tip at end of tour directly."},{icon:"🏨",label:"Hotels",tip:"€1–2 per night / bag",detail:"Housekeeping: €1–2 per night. Porterage: €1–2 per bag. Concierge: €5–10 for booking or arrangements."},{icon:"🛻",label:"Delivery Services",tip:"€1–2",detail:"€1–2 per delivery is considerate, especially in bad weather or for multiple items."},{icon:"💈",label:"Hair & Beauty",tip:"10%",detail:"About 10% is standard at salons. Round up for quick services like a trim."}],note:"Germans appreciate efficiency and don't expect large tips. The 'round up' method is very common and perfectly acceptable."},
+  {name:"Greece",flag:"🇬🇷",currency:"EUR (€)",group:"eu",culture:"Tipping is warmly appreciated but not strictly expected. Cash tips are strongly preferred as card tips may not reach the staff.",categories:[{icon:"🍽️",label:"Restaurants",tip:"5–10% in cash",detail:"Leave cash on the table, even if paying by card. 5–10% is generous. Round up for simple taverna meals."},{icon:"☕",label:"Cafés",tip:"€0.50–1 per drink",detail:"Greeks often leave small change at the café. Rounding up the bill or leaving €1 is appreciated."},{icon:"🚕",label:"Taxis",tip:"Round up + small tip",detail:"Drivers often round up the fare themselves; you can add €0.50–1 on top for good service or luggage help."},{icon:"🚌",label:"Private Transfers",tip:"€5–10 per trip",detail:"For transfers to/from airports or ports, €5–10 is a generous tip. More for longer island transfers."},{icon:"🎒",label:"Tour Guides",tip:"€5–15 per person/day",detail:"Local guides working hard in summer heat especially appreciate tips. €10–15 per person for private tours."},{icon:"🏨",label:"Hotels",tip:"€1–2 per night",detail:"Leave daily in the room in cash. Tip bellhops €1–2 per bag. Boat or resort staff: €2–5 per day."},{icon:"⛵",label:"Boat Captains / Crew",tip:"€5–20 per person",detail:"For private boat tours or charters, tip the captain €10–20 per person for a day trip. More for multi-day charters."},{icon:"🏝️",label:"Resort / Villa Staff",tip:"€2–5 per day",detail:"For villa or resort stays, tip housekeeping, pool staff, and butlers €2–5 per day in cash."}],note:"Always tip in cash in Greece. Many establishments are cash-only, and card tips rarely reach workers directly."},
+  {name:"Hungary",flag:"🇭🇺",currency:"HUF (Ft)",group:"eu",culture:"Tipping is expected in Hungary. 10–15% at restaurants is standard. Always tip in cash — adding to a card payment is not reliable.",categories:[{icon:"🍽️",label:"Restaurants",tip:"10–15%",detail:"10–15% is expected. Do NOT add to the card total — hand cash directly to the server. Saying 'thank you' while paying implies you don't want change."},{icon:"☕",label:"Cafés & Bars",tip:"10% or round up",detail:"Leave 10% for table service. At the bar, rounding up is fine."},{icon:"🚕",label:"Taxis",tip:"10%",detail:"Use Bolt or licensed taxis. 10% tip on top of the metered fare is standard."},{icon:"🚌",label:"Private Transfers",tip:"500–1000 Ft per trip",detail:"500–1000 HUF for Budapest airport transfers. More for longer or rural transfers."},{icon:"🎒",label:"Tour Guides",tip:"500–1500 Ft per person",detail:"Budapest group tours: 500 HUF per person. Private guides: 1000–2000 HUF per person per day."},{icon:"🏨",label:"Hotels",tip:"200–500 Ft per night / bag",detail:"Housekeeping: 200–500 HUF per night. Bellhop: 200 HUF per bag."},{icon:"♨️",label:"Thermal Baths Attendants",tip:"200–500 Ft",detail:"Attendants at Budapest's famous thermal baths appreciate 200–500 HUF."},{icon:"🎻",label:"Restaurant Musicians",tip:"500–1000 Ft",detail:"Roma violin players who visit tables expect a tip of 500–1000 HUF per table."}],note:"Hungary's unique tipping culture means saying 'thank you' while handing over cash signals no change required. Always tip servers directly and in cash."},
+  {name:"Ireland",flag:"🇮🇪",currency:"EUR (€)",group:"eu",culture:"Tipping is appreciated in Ireland. 10–15% at restaurants is the norm. Pubs generally don't expect tips, but rounds and generosity are part of Irish culture.",categories:[{icon:"🍽️",label:"Restaurants",tip:"10–15%",detail:"10–15% for good service. Check if a service charge has been added first — common at Dublin restaurants."},{icon:"🍺",label:"Pubs",tip:"Not expected / offer a round",detail:"Irish pub culture doesn't involve cash tips. Offering to buy the barman a drink ('have one yourself') is the traditional gesture."},{icon:"🚕",label:"Taxis",tip:"10% or round up",detail:"Round up or add 10%. Drivers in Dublin are known to be chatty — good conversation merits a tip."},{icon:"🚌",label:"Private Transfers",tip:"€5–10 per trip",detail:"€5–10 for airport transfers. For full-day hire, €10–15 is fair."},{icon:"🎒",label:"Tour Guides",tip:"€5–10 per person/day",detail:"Group tours of the Ring of Kerry or Cliffs of Moher: €5 per person. Private guides: €10–15."},{icon:"🏨",label:"Hotels",tip:"€1–2 per night / bag",detail:"Housekeeping: €1–2 per night. Bellhop: €1 per bag. Concierge: €5 for special arrangements."},{icon:"🧘",label:"Golf Caddies",tip:"€20–40",detail:"Ireland is famous for golf. Caddies typically receive €20–40 per round depending on quality."},{icon:"💆",label:"Spas & Salons",tip:"10%",detail:"10% at hotel spas and hair salons is appreciated."}],note:"Ireland has a warm, generous culture. Refusing a tip gracefully is not unusual — many Irish people appreciate the gesture even if they decline it."},
+  {name:"Italy",flag:"🇮🇹",currency:"EUR (€)",group:"eu",culture:"Check for 'coperto' (cover charge) and 'servizio' (service charge) on bills. If servizio is included, no additional tip needed.",categories:[{icon:"🍽️",label:"Restaurants",tip:"€2–5 per table",detail:"If servizio (~10–15%) is not included, leaving €2–5 per table is appropriate. Never tip on top of a servizio charge."},{icon:"☕",label:"Cafés & Bars",tip:"€0.10–0.50 coin",detail:"At a bar, it's customary to leave small coins on the bar counter when paying. Even €0.10 is acknowledged."},{icon:"🚕",label:"Taxis",tip:"Round up + €0.50–1",detail:"Round up the fare. For help with luggage, add €0.50–1 per bag. Tipping beyond rounding is not expected."},{icon:"🚌",label:"Private Transfers",tip:"€5–15 per trip",detail:"€5–10 for standard airport runs. For full-day private transfers with a driver, €10–15 is appropriate."},{icon:"🎒",label:"Tour Guides",tip:"€10–15 per person/day",detail:"Private guides: €15–20 per person per day. Group tour guides: €5–10 per person. More for exceptional service."},{icon:"🏨",label:"Hotels",tip:"€1–2 per night / bag",detail:"Housekeeping: €1–2 per night left daily (staff rotate). Porterage: €1–2 per bag. Concierge: €5–20 for theatre tickets, etc."},{icon:"🚣",label:"Gondoliers / Boat Drivers",tip:"€5–10",detail:"For gondola rides, €5–10 on top of the fare shows appreciation, especially for singing or extended tours."},{icon:"🍕",label:"Delivery / Takeaway",tip:"€1–2",detail:"Not expected but appreciated, particularly for longer deliveries. €1–2 is a kind gesture."}],note:"Italy does not have a strong tipping culture. Small gestures are warmly received; large tips can cause confusion."},
+  {name:"Latvia",flag:"🇱🇻",currency:"EUR (€)",group:"eu",culture:"Tipping is becoming more common in Latvia, especially in Riga's restaurant scene. 10% is appreciated but not obligatory.",categories:[{icon:"🍽️",label:"Restaurants",tip:"10%",detail:"10% is a growing norm in Riga. In local eateries outside the capital, rounding up is sufficient."},{icon:"☕",label:"Cafés & Bars",tip:"Round up",detail:"Leave the small change or round up to the nearest euro. No strong expectation to tip."},{icon:"🚕",label:"Taxis",tip:"Round up",detail:"Use Bolt for reliable pricing. Round up the fare. Tipping is optional."},{icon:"🚌",label:"Private Transfers",tip:"€3–8 per trip",detail:"€3–5 for Riga city runs. €5–10 for airport or longer transfers."},{icon:"🎒",label:"Tour Guides",tip:"€5–10 per person/day",detail:"Riga old town tours: €5 per person. Private guides: €8–12 per person."},{icon:"🏨",label:"Hotels",tip:"€1–2 per night / bag",detail:"Housekeeping and bellhop tips are welcomed. €1–2 is appreciated."},{icon:"🎻",label:"Live Music & Folk Shows",tip:"€2–5",detail:"For traditional Latvian folk performances, €2–5 per person is a kind gesture."},{icon:"🧖",label:"Spas",tip:"5–10%",detail:"Latvia has excellent spa culture. Tip 5–10% for quality treatments."}],note:"Latvia's tipping culture is evolving. Younger urban populations increasingly expect 10%, while traditional establishments are happy with a round-up."},
+  {name:"Lithuania",flag:"🇱🇹",currency:"EUR (€)",group:"eu",culture:"Tipping is not deeply embedded in Lithuanian culture but is appreciated in Vilnius and tourist areas. 10% is a reasonable gesture.",categories:[{icon:"🍽️",label:"Restaurants",tip:"10% in tourist areas",detail:"10% is appreciated in Vilnius and Kaunas restaurants. Elsewhere, rounding up is fine."},{icon:"☕",label:"Cafés",tip:"Round up",detail:"Leave small change or round up to the nearest euro."},{icon:"🚕",label:"Taxis",tip:"Round up",detail:"Use Bolt — fixed prices. Round up the fare. No real obligation to tip."},{icon:"🚌",label:"Private Transfers",tip:"€3–8 per trip",detail:"€3–5 for Vilnius runs. €5–10 for airport transfers or longer journeys."},{icon:"🎒",label:"Tour Guides",tip:"€5–10 per person/day",detail:"Vilnius old town: €5 per person. Private guides: €8–12 per person per day."},{icon:"🏨",label:"Hotels",tip:"€1–2 per night / bag",detail:"Housekeeping and bellhop tips are appreciated. Leave daily in cash."},{icon:"🍳",label:"Food Tours",tip:"€5–10",detail:"Vilnius food tours and culinary experiences: €5–10 per person for an excellent guide."},{icon:"🧖",label:"Spas",tip:"5–10%",detail:"Lithuania has affordable, high-quality spas. 5–10% for good treatments is appreciated."}],note:"Lithuania is one of Europe's most affordable destinations. Tips genuinely matter to service workers here — your gesture makes a difference."},
+  {name:"Luxembourg",flag:"🇱🇺",currency:"EUR (€)",group:"eu",culture:"Service charges are often included in Luxembourg. Tipping is discretionary but 5–10% for good service is appreciated in this high-cost country.",categories:[{icon:"🍽️",label:"Restaurants",tip:"5–10% (check bill)",detail:"Service is often included. If not, 5–10% for good service. Luxembourgers are well-paid so don't over-tip."},{icon:"☕",label:"Cafés",tip:"Round up",detail:"Rounding up to the nearest euro is the standard gesture at cafés."},{icon:"🚕",label:"Taxis",tip:"Round up + 5%",detail:"Round up and add 5%. Luxembourg taxis are metered and generally reliable."},{icon:"🚌",label:"Private Transfers",tip:"€5–10 per trip",detail:"€5–10 for transfers. For full-day hire, €10–15 is appropriate."},{icon:"🎒",label:"Tour Guides",tip:"€5–10 per person/day",detail:"Luxembourg City tours: €5 per person. Private guides to the Ardennes: €10–15."},{icon:"🏨",label:"Hotels",tip:"€1–2 per night / bag",detail:"Housekeeping and bellhop tips are appreciated. Luxembourg has many luxury hotels."},{icon:"🏰",label:"Castle & Heritage Tours",tip:"€5–10 per guide",detail:"Guides at Vianden or Bourscheid castles appreciate €5–10 for personalized tours."},{icon:"🍷",label:"Wine Bar Sommeliers",tip:"€3–5",detail:"Moselle Valley wine bar sommeliers appreciate €3–5 for tastings and recommendations."}],note:"Luxembourg is one of Europe's wealthiest countries. Staff are well paid and tipping is genuinely optional — but appreciated for great service."},
+  {name:"Malta",flag:"🇲🇹",currency:"EUR (€)",group:"eu",culture:"Tipping is common in Malta, especially in tourist areas. 10% at restaurants is standard. Cash is preferred.",categories:[{icon:"🍽️",label:"Restaurants",tip:"10%",detail:"10% is the norm in Valletta and tourist areas. Check whether service has been included first."},{icon:"☕",label:"Cafés & Pastizzerias",tip:"Round up",detail:"Leave small change. A round-up is appreciated at the famous Maltese pastizzeria."},{icon:"🚕",label:"Taxis & Water Taxis",tip:"Round up + €1–2",detail:"Agree fares in advance. Add €1–2 for good service. Water taxi operators appreciate €1–2 per trip."},{icon:"🚌",label:"Private Transfers",tip:"€3–8 per trip",detail:"€3–5 for Valletta runs. €5–10 for airport or Gozo ferry transfers."},{icon:"🎒",label:"Tour Guides",tip:"€5–10 per person/day",detail:"Valletta, Mdina, and Gozo tours: €5 per person. Private guides: €10–15."},{icon:"🏨",label:"Hotels",tip:"€1–2 per night / bag",detail:"Housekeeping: €1–2 per night. Bellhop: €1 per bag. Pool attendants at beach resorts: €1–2."},{icon:"🤿",label:"Dive Instructors & Boat Crew",tip:"€5–10",detail:"Malta is famous for diving. Tip dive masters €5–10 per dive, and boat crew similarly."},{icon:"🏛️",label:"Heritage Site Guides",tip:"€3–5",detail:"Guides at Hal Saflieni Hypogeum or the Megalithic Temples appreciate €3–5."}],note:"Malta is a popular year-round destination. In summer, tourist areas can feel very busy — a generous tip for quality service goes a long way."},
+  {name:"Netherlands",flag:"🇳🇱",currency:"EUR (€)",group:"eu",culture:"The Dutch are famously egalitarian. Tipping is not a cultural expectation, but a 5–10% tip for great service is always well-received.",categories:[{icon:"🍽️",label:"Restaurants",tip:"5–10% for good service",detail:"Not expected, but 5–10% for excellent service is a kind gesture. The Dutch are unlikely to tip for average service."},{icon:"🍻",label:"Bars & Pubs",tip:"Round up or €1",detail:"Rounding up is the norm. Some locals skip tipping entirely at bars; €1 per round for good service is friendly."},{icon:"🚕",label:"Taxis",tip:"Round up + 5%",detail:"Round up the fare. A 5% tip is appreciated but not assumed. Uber/Bolt drivers: round up via app."},{icon:"🚌",label:"Private Transfers",tip:"€5–10 per trip",detail:"For premium transfers, €5–10 is appropriate. Full-day chauffeur: €10–15 at the end of the day."},{icon:"🎒",label:"Tour Guides",tip:"€5–10 per person/day",detail:"Canal boat tours: €2–5 per person. Private city or bike guides: €5–10 per person."},{icon:"🏨",label:"Hotels",tip:"€1–2 per service",detail:"Bellhop: €1–2 per bag. Housekeeping: €1–2 per night. Not strictly expected."},{icon:"🚲",label:"Bike Tour Guides",tip:"€3–5",detail:"For guided bike tours through Amsterdam or the countryside, €5 per person is a considerate tip."},{icon:"🛥️",label:"Canal Boat Operators",tip:"€3–10",detail:"For private canal tours, €5–10 per person depending on the length and quality."}],note:"The Netherlands has a strong minimum wage and social safety net. Tipping is truly optional here — never feel obligated."},
+  {name:"Poland",flag:"🇵🇱",currency:"PLN (zł)",group:"eu",culture:"Tipping is expected in Poland, particularly in Warsaw and Kraków. 10% is standard at restaurants. Always tip in cash.",categories:[{icon:"🍽️",label:"Restaurants",tip:"10–15%",detail:"10% is the standard. In upscale Warsaw or Kraków restaurants, 15% is appropriate. Always tip in cash."},{icon:"☕",label:"Cafés & Milk Bars",tip:"Round up or 5–10%",detail:"At traditional 'bar mleczny' milk bars, rounding up is fine. At trendy cafés, 5–10%."},{icon:"🚕",label:"Taxis",tip:"Round up + 10%",detail:"Use Bolt or Free Now apps. Round up and add 10%. Avoid unlicensed taxis near tourist areas."},{icon:"🚌",label:"Private Transfers",tip:"10–20 zł per trip",detail:"10–20 PLN for city transfers. For airport runs, 20–40 PLN. Full-day hire: 40–60 PLN."},{icon:"🎒",label:"Tour Guides",tip:"10–20 zł per person",detail:"Kraków old town: 10–15 PLN per person. Auschwitz guides: 15–20 PLN. Private guides: 30–50 PLN/day."},{icon:"🏨",label:"Hotels",tip:"5–10 zł per night / bag",detail:"Housekeeping: 5–10 PLN per night. Bellhop: 5 PLN per bag. Leave daily in the room."},{icon:"🧂",label:"Street Food Stalls",tip:"Round up",detail:"Warsaw's and Kraków's food stalls appreciate rounding up. No formal tipping expected."},{icon:"🎻",label:"Folk & Klezmer Performers",tip:"5–10 zł",detail:"Street performers and restaurant folk musicians in Kraków's Kazimierz district: 5–10 PLN."}],note:"Poland is excellent value for travellers. Tips in PLN (złoty) are important — wages in hospitality can be low and your tip makes a real difference."},
+  {name:"Portugal",flag:"🇵🇹",currency:"EUR (€)",group:"eu",culture:"Tipping is appreciated but not obligatory. Portugal has one of the more relaxed tipping cultures in Western Europe.",categories:[{icon:"🍽️",label:"Restaurants",tip:"5–10%",detail:"Rounding up or leaving 5–10% is welcomed. Some restaurants add a couvert (bread/olives charge) — this is not a service charge."},{icon:"☕",label:"Cafés & Pastelarias",tip:"€0.20–0.50 coins",detail:"Leave small change on the counter or table. Even €0.20 is acknowledged with a smile."},{icon:"🚕",label:"Taxis",tip:"Round up fare",detail:"Rounding up to the nearest euro is sufficient. Add €1 for help with bags or during late-night trips."},{icon:"🚌",label:"Private Transfers",tip:"€5–10 per trip",detail:"€5 for standard airport transfers. For full-day drivers, €10–15 is fair."},{icon:"🎒",label:"Tour Guides",tip:"€5–10 per person/day",detail:"Group tours: €3–5 per person. Private guides: €10–15 per person. Sintra and Alentejo winery guides especially appreciate tips."},{icon:"🏨",label:"Hotels",tip:"€1 per night / bag",detail:"Housekeeping: €1 per night. Bellhop: €1 per bag. Smaller and family-run guesthouses appreciate any gesture."},{icon:"🎸",label:"Fado Performers",tip:"€2–5",detail:"If you attend a fado dinner, leaving €2–5 per person for performers is customary and appreciative."},{icon:"🏄",label:"Surf / Activity Instructors",tip:"€5–10",detail:"Surf instructors and outdoor guides appreciate €5–10 for good lessons or half-day experiences."}],note:"Portuguese service workers are often underpaid. Tipping, while not expected, makes a meaningful difference."},
+  {name:"Romania",flag:"🇷🇴",currency:"RON (lei)",group:"eu",culture:"Tipping is expected in Romania. 10% is the standard at restaurants. Service quality in Bucharest has improved greatly — reward it accordingly.",categories:[{icon:"🍽️",label:"Restaurants",tip:"10%",detail:"10% is widely expected, especially in Bucharest. Tip in cash directly to the server."},{icon:"☕",label:"Cafés & Bars",tip:"Round up or 5–10%",detail:"Rounding up or leaving 5–10% at cafés and bars is appreciated."},{icon:"🚕",label:"Taxis",tip:"Round up + 5%",detail:"Use Bolt or Free Now. Add 5% to the metered fare. Avoid unlicensed taxis."},{icon:"🚌",label:"Private Transfers",tip:"10–20 lei per trip",detail:"10–20 RON for city transfers. For airport runs, 20–30 RON is appropriate."},{icon:"🎒",label:"Tour Guides",tip:"10–20 lei per person",detail:"Bucharest tours: 10 RON per person. Transylvania castle tours: 15–20 RON. Private guides: 40–60 RON/day."},{icon:"🏨",label:"Hotels",tip:"5–10 lei per night / bag",detail:"Housekeeping: 5–10 RON per night. Bellhop: 5 RON per bag."},{icon:"🏰",label:"Castle Guides",tip:"10–20 lei",detail:"Local guides at Bran (Dracula's Castle) and Peleș appreciate 10–20 RON for personalized tours."},{icon:"💆",label:"Spas & Thermal Baths",tip:"10%",detail:"Romania has excellent affordable spas. 10% for good treatments is appreciated."}],note:"Romania is one of Europe's best-value destinations. Hospitality wages are low — tipping is genuinely impactful and deeply appreciated."},
+  {name:"Slovakia",flag:"🇸🇰",currency:"EUR (€)",group:"eu",culture:"Tipping is appreciated in Slovakia. 10% is the norm at restaurants in Bratislava. Less expected in rural areas.",categories:[{icon:"🍽️",label:"Restaurants",tip:"10%",detail:"10% is expected in Bratislava. In rural Slovakia, rounding up is fine. Tip in cash directly to the server."},{icon:"🍺",label:"Pubs & Beer Bars",tip:"Round up",detail:"Round up the tab. Slovak pub culture doesn't involve large tips — just leave the coins."},{icon:"🚕",label:"Taxis",tip:"Round up + 5%",detail:"Use licensed taxis or Bolt. Round up and add 5%."},{icon:"🚌",label:"Private Transfers",tip:"€3–8 per trip",detail:"€3–5 for Bratislava city runs. €5–10 for airport or cross-border transfers."},{icon:"🎒",label:"Tour Guides",tip:"€5–10 per person/day",detail:"Bratislava old town tours: €3–5 per person. High Tatras guides: €10–15 per person."},{icon:"🏨",label:"Hotels",tip:"€1–2 per night / bag",detail:"Housekeeping and bellhop tips are appreciated. €1–2 is generous here."},{icon:"⛷️",label:"Ski Guides (High Tatras)",tip:"€5–10",detail:"Ski instructors in the High Tatras or Jasná resort: €5–10 per half-day lesson."},{icon:"🏰",label:"Castle Tour Guides",tip:"€3–5",detail:"Guides at Bojnice or Spiš Castle: €3–5 for informative tours."}],note:"Slovakia is a compact, affordable country. Bratislava's service scene is growing and tips are increasingly expected in the capital's restaurants."},
+  {name:"Slovenia",flag:"🇸🇮",currency:"EUR (€)",group:"eu",culture:"Tipping is appreciated but not obligatory in Slovenia. 10% in restaurants is a kind gesture. The service culture is professional and courteous.",categories:[{icon:"🍽️",label:"Restaurants",tip:"10% (appreciated)",detail:"10% is a kind gesture in Ljubljana and Lake Bled. Not obligatory but always welcomed."},{icon:"☕",label:"Cafés",tip:"Round up",detail:"Rounding up to the nearest euro is the norm. Café culture in Ljubljana is vibrant."},{icon:"🚕",label:"Taxis",tip:"Round up + 5%",detail:"Round up the fare. Ljubljana taxis are metered and reliable."},{icon:"🚌",label:"Private Transfers",tip:"€3–8 per trip",detail:"€3–5 for Ljubljana city transfers. €5–10 for Lake Bled or Triglav transfers."},{icon:"🎒",label:"Tour Guides",tip:"€5–10 per person/day",detail:"Ljubljana and Bled tours: €5 per person. Triglav National Park guides: €10–15."},{icon:"🏨",label:"Hotels",tip:"€1–2 per night / bag",detail:"Housekeeping and bellhop tips are appreciated. Slovenia has excellent boutique hotels."},{icon:"🛶",label:"Pletna Boats (Bled)",tip:"€2–5",detail:"The traditional wooden pletna boats on Lake Bled: €2–5 for the oarsmen is traditional."},{icon:"🧗",label:"Adventure & Climbing Guides",tip:"€5–15",detail:"Slovenia is a top outdoor destination. Mountain and adventure guides: €5–15 per person per day."}],note:"Slovenia punches above its weight for natural beauty and hospitality. A tip here is truly appreciated — the service culture is genuine and warm."},
+  {name:"Spain",flag:"🇪🇸",currency:"EUR (€)",group:"eu",culture:"Tipping is entirely discretionary. Spaniards rarely tip, but tourists are generally expected to leave something small.",categories:[{icon:"🍽️",label:"Restaurants",tip:"5–10% or round up",detail:"Locals often leave small coins. Tourists can leave 5–10% for good service. Never tip for mediocre service — it's not obligatory."},{icon:"🍺",label:"Tapas Bars",tip:"Round up coins",detail:"Leave the small change — €0.50–1 per person. Tipping is casual and informal in bar settings."},{icon:"🚕",label:"Taxis",tip:"Round up the fare",detail:"Simply round up the meter fare. For airport trips or help with bags, adding €1–2 is appreciated."},{icon:"🚌",label:"Private Transfers",tip:"€5–10 per trip",detail:"€5 for a standard transfer. For full-day hires, €10–15 is fair. Tip at the end of the service."},{icon:"🎒",label:"Tour Guides",tip:"€5–15 per person/day",detail:"Private guides: €10–15 per person per day. Group tours: €3–5 per person. More for wine country or specialized tours."},{icon:"🏨",label:"Hotels",tip:"€1 per night / bag",detail:"Housekeeping: €1 per night. Bellhop: €1 per bag. Not mandatory but always appreciated."},{icon:"💇",label:"Hairdressers / Beauty",tip:"5–10%",detail:"5–10% for good service at salons. Not customary at budget establishments."},{icon:"⛷️",label:"Ski / Activity Guides",tip:"€10–20 per person",detail:"For ski instructors or adventure guides, €10–20 per person per day based on quality of experience."}],note:"Spain has one of Europe's lowest tipping cultures. Locals seldom tip. Small gestures are gracious; large tips are unusual."},
+  {name:"Sweden",flag:"🇸🇪",currency:"SEK (kr)",group:"eu",culture:"Sweden has a low tipping culture. Staff are well paid and tipping is not expected. 5–10% for exceptional service is a genuine compliment.",categories:[{icon:"🍽️",label:"Restaurants",tip:"5–10% for good service",detail:"Not expected but 5–10% for excellent service is a kind gesture. Sweden is increasingly card-only — many venues now prompt for a tip on the card reader."},{icon:"☕",label:"Cafés & Fika",tip:"Not customary",detail:"Swedish fika culture doesn't involve tipping. Round up if you'd like."},{icon:"🚕",label:"Taxis",tip:"Round up",detail:"Round up to the nearest 10 SEK. Adding 10% for good service is generous."},{icon:"🚌",label:"Private Transfers",tip:"50–100 kr per trip",detail:"50–100 SEK for city transfers. 100–200 SEK for airport or full-day hire."},{icon:"🎒",label:"Tour Guides",tip:"50–100 kr per person",detail:"Stockholm guided tours: 50 SEK per person. Private guides: 100–200 SEK per person per day."},{icon:"🏨",label:"Hotels",tip:"20–50 kr per service",detail:"Housekeeping and bellhop: 20–50 SEK. Truly optional in Sweden."},{icon:"🎿",label:"Ski & Outdoor Guides",tip:"50–100 kr",detail:"Swedish Lapland guides, ski instructors, and dogsled operators: 50–100 SEK per person."},{icon:"🍣",label:"High-End Dining",tip:"10%",detail:"At Michelin-star or high-end Stockholm restaurants, 10% is increasingly appreciated."}],note:"Sweden is moving cashless rapidly — many places don't accept cash at all. Check if card tip prompts appear on the terminal before reaching for your wallet."},
+  {name:"Albania",flag:"🇦🇱",currency:"ALL (L)",group:"other",culture:"Tipping is appreciated in Albania and growing with tourism. 10% is the norm in Tirana and coastal resorts. The hospitality culture is genuinely warm.",categories:[{icon:"🍽️",label:"Restaurants",tip:"10%",detail:"10% is a fair tip in tourist areas and Tirana. In rural areas, rounding up is sufficient."},{icon:"☕",label:"Cafés & Bakeries",tip:"Round up",detail:"Leave small change or round up. Albanian café culture is vibrant and tips are appreciated."},{icon:"🚕",label:"Taxis",tip:"Round up + 10%",detail:"Agree fares in advance. Add 10% for good drivers in Tirana or on the Riviera."},{icon:"🚌",label:"Private Transfers",tip:"500–1000 L per trip",detail:"500–1000 ALL for airport transfers. More for Riviera or mountain transfers."},{icon:"🎒",label:"Tour Guides",tip:"500–1000 L per person",detail:"Berat and Gjirokastër UNESCO tours: 500 ALL per person. Private guides: 800–1500 ALL/day."},{icon:"🏨",label:"Hotels",tip:"200–500 L per night",detail:"Housekeeping: 200–500 ALL per night. Bellhop: 100–200 ALL per bag."},{icon:"⛵",label:"Riviera Boat Trips",tip:"300–500 L",detail:"Boat operators along the Albanian Riviera appreciate 300–500 ALL for day trips."},{icon:"🏔️",label:"Mountain Guides",tip:"500–1000 L",detail:"Guides on the Accursed Mountains or Valbona Valley: 500–1000 ALL per person per day."}],note:"Albania is one of Europe's most underrated destinations. The people are exceptionally hospitable — a tip is received with genuine warmth and gratitude."},
+  {name:"Andorra",flag:"🇦🇩",currency:"EUR (€)",group:"other",culture:"Andorra is a tiny duty-free principality between France and Spain. Tipping customs follow French and Spanish norms. Service is often included.",categories:[{icon:"🍽️",label:"Restaurants",tip:"5–10%",detail:"5–10% for good service. Check whether service is included, which it often is at ski resort restaurants."},{icon:"☕",label:"Cafés & Bars",tip:"Round up",detail:"Round up the total. Andorra's café culture blends French and Spanish habits."},{icon:"🚕",label:"Taxis",tip:"Round up + 5%",detail:"Andorra is tiny — most journeys are short. Round up and add 5%."},{icon:"🚌",label:"Private Transfers",tip:"€3–8 per trip",detail:"€3–5 for in-country transfers. €5–10 for transfers to Spanish or French border."},{icon:"🎒",label:"Ski & Mountain Guides",tip:"€10–20 per person",detail:"Ski instructors at Grandvalira: €10–20 per person per half-day. Mountain guides: similar."},{icon:"🏨",label:"Hotels",tip:"€1–2 per night / bag",detail:"Housekeeping and bellhop: €1–2. Ski resort hotels especially appreciate tips."},{icon:"🛍️",label:"Shopping & Duty-Free Staff",tip:"Not expected",detail:"Andorra's duty-free shopping staff are not tipped. Service is considered part of the retail experience."},{icon:"🏔️",label:"Hiking Guides",tip:"€5–10",detail:"For guided hikes in the Pyrenees, €5–10 per person is a kind gesture."}],note:"Andorra is primarily a shopping and ski destination. Tipping follows neighbouring country norms — modest gestures for genuine service."},
+  {name:"Bosnia & Herzegovina",flag:"🇧🇦",currency:"BAM (KM)",group:"other",culture:"Tipping is appreciated in Bosnia and Herzegovina. 10% is common in Sarajevo. The hospitality is genuine and warm.",categories:[{icon:"🍽️",label:"Restaurants",tip:"10%",detail:"10% is the standard in Sarajevo and Mostar. Leave cash — card tips are unreliable."},{icon:"☕",label:"Kafana & Cafés",tip:"Round up",detail:"Traditional kafana culture: leave small change. At modern cafés, rounding up is appreciated."},{icon:"🚕",label:"Taxis",tip:"Round up + 10%",detail:"Agree fares beforehand. Add 10% for reliable drivers. Apps are growing in Sarajevo."},{icon:"🚌",label:"Private Transfers",tip:"2–5 KM per trip",detail:"2–5 BAM for Sarajevo city runs. 5–10 BAM for Mostar or longer transfers."},{icon:"🎒",label:"Tour Guides",tip:"5–10 KM per person",detail:"Sarajevo war history tours: 5–8 BAM per person. Mostar and Kravice Falls: 5–10 BAM."},{icon:"🏨",label:"Hotels",tip:"1–2 KM per night",detail:"Housekeeping: 1–2 BAM per night. Bellhop: 1 BAM per bag."},{icon:"🕌",label:"Old Town Guides",tip:"3–5 KM",detail:"Guided walks through Sarajevo's Baščaršija bazaar: 3–5 BAM per person."},{icon:"🏞️",label:"Outdoor & Adventure Guides",tip:"5–10 KM",detail:"Rafting on the Tara or hiking guides: 5–10 BAM per person per day."}],note:"Bosnia is deeply hospitable — the culture of 'merak' (warm hospitality) means your tip will be received with genuine appreciation. Always tip in cash."},
+  {name:"Iceland",flag:"🇮🇸",currency:"ISK (kr)",group:"other",culture:"Iceland has no real tipping culture. Staff are well paid and tipping is not expected. It can even feel awkward in traditional settings.",categories:[{icon:"🍽️",label:"Restaurants",tip:"Not expected / optional",detail:"No tipping culture. Rounding up on the card terminal if prompted is fine. Don't feel obligated."},{icon:"☕",label:"Cafés",tip:"Not expected",detail:"No expectation to tip at Reykjavik's many excellent cafés."},{icon:"🚕",label:"Taxis",tip:"Round up",detail:"Round up the fare if you'd like. No obligation — Icelandic drivers don't expect tips."},{icon:"🚌",label:"Private Transfers",tip:"Optional €5–10",detail:"Truly optional. If your airport transfer driver was exceptional, €5–10 is a generous gesture."},{icon:"🎒",label:"Tour Guides",tip:"Optional 1000–2000 ISK",detail:"For Northern Lights or glacier tours, 1000–2000 ISK per person is a kind thank-you. Not obligatory."},{icon:"🏨",label:"Hotels",tip:"Not expected",detail:"No tipping culture in Icelandic hotels. Leave nothing, or a small token if service was genuinely exceptional."},{icon:"🌋",label:"Glacier & Volcano Guides",tip:"1000–3000 ISK",detail:"For multi-hour glacier walks or lava tube tours, 1000–3000 ISK per person is appreciated."},{icon:"🐋",label:"Whale Watching Crews",tip:"500–1000 ISK",detail:"Whale watching boat crew appreciate 500–1000 ISK for a good sighting experience."}],note:"Iceland is one of the most expensive countries in the world. Wages are high and tipping is culturally unusual — your presence and spending is already deeply appreciated."},
+  {name:"Kosovo",flag:"🇽🇰",currency:"EUR (€)",group:"other",culture:"Tipping is appreciated in Kosovo. 10% is standard in Pristina. The hospitality culture is generous and welcoming to visitors.",categories:[{icon:"🍽️",label:"Restaurants",tip:"10%",detail:"10% is the norm in Pristina. Leave cash directly with the server."},{icon:"☕",label:"Cafés",tip:"Round up or 10%",detail:"Café culture is important in Kosovo. Leave the small change or round up."},{icon:"🚕",label:"Taxis",tip:"Round up + 10%",detail:"Agree fares beforehand. Add 10% for good service."},{icon:"🚌",label:"Private Transfers",tip:"€3–8 per trip",detail:"€3–5 for Pristina city runs. €5–10 for airport or cross-border transfers."},{icon:"🎒",label:"Tour Guides",tip:"€5–10 per person/day",detail:"Pristina and Prizren tours: €5 per person. Private guides: €8–15."},{icon:"🏨",label:"Hotels",tip:"€1–2 per night / bag",detail:"Housekeeping and bellhop: €1–2. Kosovo uses euros despite not being an EU member."},{icon:"🏛️",label:"Heritage & Religious Site Guides",tip:"€3–5",detail:"Guides at Visoki Dečani Monastery or Prizren Fortress: €3–5 for a good tour."},{icon:"🍳",label:"Food & Culture Tours",tip:"€5–10",detail:"Pristina food tours: €5–10 per person for an excellent culinary guide."}],note:"Kosovo is young, vibrant, and incredibly welcoming. It's one of Europe's least visited yet most hospitable countries — your tip will be warmly received."},
+  {name:"Liechtenstein",flag:"🇱🇮",currency:"CHF (Fr)",group:"other",culture:"Liechtenstein follows Swiss tipping customs. Service is usually included in prices. Small tips are appreciated for exceptional service.",categories:[{icon:"🍽️",label:"Restaurants",tip:"Round up or 5%",detail:"Service is typically included. Rounding up or adding 5% for exceptional service is appropriate."},{icon:"☕",label:"Cafés",tip:"Round up",detail:"Round up to the nearest franc. No strong expectation to tip."},{icon:"🚕",label:"Taxis",tip:"Round up + 5%",detail:"Round up and add 5%. Liechtenstein has very few taxis — transfers often come from Switzerland."},{icon:"🚌",label:"Private Transfers",tip:"CHF 5–10 per trip",detail:"CHF 5–10 for transfers to/from Vaduz or the Swiss border."},{icon:"🎒",label:"Tour Guides",tip:"CHF 5–10 per person",detail:"Vaduz castle and principality tours: CHF 5–10 per person."},{icon:"🏨",label:"Hotels",tip:"CHF 2–5 per night / bag",detail:"Housekeeping and bellhop: CHF 2–5. Liechtenstein has a small number of excellent hotels."},{icon:"⛷️",label:"Ski Guides (Malbun)",tip:"CHF 10–20",detail:"Ski instructors at Malbun: CHF 10–20 per person per half-day."},{icon:"🍷",label:"Winery Tours",tip:"CHF 5–10",detail:"Liechtenstein produces excellent wine — winery tour guides appreciate CHF 5–10."}],note:"Liechtenstein is tiny and wealthy. Follow Swiss customs — polite, modest tips for genuine service. Large tips are unusual and can feel excessive."},
+  {name:"Monaco",flag:"🇲🇨",currency:"EUR (€)",group:"other",culture:"Monaco is one of the world's wealthiest places. Tipping expectations are higher here. 10–15% at restaurants and generous tips at luxury venues are the norm.",categories:[{icon:"🍽️",label:"Restaurants",tip:"10–15%",detail:"10–15% even if service is included — it's expected in Monaco's luxury dining scene. At Michelin-star restaurants, 15–20%."},{icon:"☕",label:"Cafés & Hotel Bars",tip:"€1–3 per drink",detail:"€1–3 per drink at hotel bars. At casino bars, €2–5 is customary."},{icon:"🚕",label:"Taxis",tip:"10–15%",detail:"Monaco taxis are expensive. Add 10–15% on top."},{icon:"🚗",label:"Chauffeur & Limousines",tip:"15–20% or €20–50",detail:"For luxury chauffeur services, 15–20% or a flat €20–50 is appropriate."},{icon:"🎒",label:"Private Guides",tip:"€20–40 per person",detail:"Monaco and Monte Carlo private guides: €20–40 per person. Premium guides for the Grand Prix circuit: more."},{icon:"🏨",label:"Luxury Hotels",tip:"€5–20 per service",detail:"Housekeeping: €5–10 per night. Bellhop: €5 per bag. Concierge: €20–50 for restaurant reservations."},{icon:"🎰",label:"Casino Staff",tip:"5–10% of winnings",detail:"Croupiers at Casino de Monte-Carlo: tip 5–10% of winnings as a 'pour le personnel'."},{icon:"⛵",label:"Yacht Charter Crew",tip:"15–20% of charter fee",detail:"For private yacht charters, 15–20% of the charter fee divided among crew is the standard."}],note:"Monaco operates at a different level entirely. Luxury tipping is expected and staff are attuned to high-net-worth guests. Under-tipping stands out more than generosity."},
+  {name:"Montenegro",flag:"🇲🇪",currency:"EUR (€)",group:"other",culture:"Tipping is appreciated and growing in Montenegro, especially along the Bay of Kotor and coastal areas. 10% is the norm at restaurants.",categories:[{icon:"🍽️",label:"Restaurants",tip:"10%",detail:"10% is standard in tourist areas. In local konoba restaurants, rounding up is fine."},{icon:"☕",label:"Cafés",tip:"Round up",detail:"Round up to the nearest euro. Café culture is important in Montenegro."},{icon:"🚕",label:"Taxis",tip:"Round up + 10%",detail:"Agree fares before starting. Add 10% for honest drivers on the winding coastal roads."},{icon:"🚌",label:"Private Transfers",tip:"€3–8 per trip",detail:"€3–5 for Kotor or Budva city runs. €5–10 for airport transfers."},{icon:"🎒",label:"Tour Guides",tip:"€5–10 per person/day",detail:"Bay of Kotor and Durmitor tours: €5–8 per person. Private guides: €10–15."},{icon:"🏨",label:"Hotels",tip:"€1–2 per night / bag",detail:"Housekeeping and bellhop: €1–2. Tip in cash."},{icon:"⛵",label:"Boat & Sailing Guides",tip:"€5–15 per person",detail:"Bay of Kotor boat tours and kayaking guides: €5–15 per person for a day trip."},{icon:"🏔️",label:"Mountain & Rafting Guides",tip:"€5–10",detail:"Tara Canyon rafting and Durmitor hiking guides: €5–10 per person per day."}],note:"Montenegro is rapidly developing its tourism sector. Your tip helps sustain the local economy and is received with genuine appreciation."},
+  {name:"North Macedonia",flag:"🇲🇰",currency:"MKD (ден)",group:"other",culture:"Tipping is appreciated in North Macedonia. 10% at restaurants is becoming the norm in Skopje and Ohrid.",categories:[{icon:"🍽️",label:"Restaurants",tip:"10%",detail:"10% is appreciated in Skopje and Ohrid. Leave cash directly with the server."},{icon:"☕",label:"Cafés",tip:"Round up",detail:"Leave the small change or round up. Café culture is vibrant in Skopje."},{icon:"🚕",label:"Taxis",tip:"Round up + 10%",detail:"Agree fares beforehand. Add 10% for reliable drivers."},{icon:"🚌",label:"Private Transfers",tip:"50–100 MKD per trip",detail:"50–100 MKD for city runs. 100–200 MKD for airport or Ohrid transfers."},{icon:"🎒",label:"Tour Guides",tip:"100–200 MKD per person",detail:"Skopje and Ohrid old town tours: 100 MKD per person. Private guides: 200–400 MKD/day."},{icon:"🏨",label:"Hotels",tip:"50–100 MKD per night",detail:"Housekeeping and bellhop: 50–100 MKD. Leave daily in cash."},{icon:"🏊",label:"Lake Ohrid Boat Trips",tip:"100–200 MKD",detail:"Boat operators on Lake Ohrid: 100–200 MKD for scenic trips to monasteries."},{icon:"🍷",label:"Winery & Food Tours",tip:"100–300 MKD",detail:"Tikveš wine region tour guides: 100–300 MKD per person."}],note:"North Macedonia is an underrated gem. The people are exceptionally warm and your tip will be gratefully received."},
+  {name:"Norway",flag:"🇳🇴",currency:"NOK (kr)",group:"other",culture:"Norway has a minimal tipping culture. Staff earn high wages and tipping is not expected. 5–10% for excellent service is a genuine compliment.",categories:[{icon:"🍽️",label:"Restaurants",tip:"5–10% for good service",detail:"Not expected but appreciated. Oslo's restaurant scene is world-class — 5–10% at fine dining is increasingly appropriate."},{icon:"☕",label:"Cafés",tip:"Not customary",detail:"Norwegians don't tip at cafés. Round up if you'd like — it's not expected."},{icon:"🚕",label:"Taxis",tip:"Round up",detail:"Round up to the nearest 10 NOK. No obligation to add more."},{icon:"🚌",label:"Private Transfers",tip:"50–100 kr per trip",detail:"50–100 NOK for Oslo city runs. 100–200 NOK for airport transfers."},{icon:"🎒",label:"Tour Guides",tip:"50–150 kr per person",detail:"Bergen and Oslo tours: 50–100 NOK per person. Fjord guides: 100–150 NOK. Private: 200–400 NOK/day."},{icon:"🏨",label:"Hotels",tip:"Not expected",detail:"Truly optional. Leave 20–50 NOK for housekeeping if service was excellent."},{icon:"🛶",label:"Fjord & Kayak Guides",tip:"100–200 kr",detail:"For guided kayak trips on the fjords, 100–200 NOK per person is appreciated."},{icon:"🐟",label:"Fishing & Nature Guides",tip:"100–200 kr",detail:"Cod fishing trips or wildlife guides in Lofoten: 100–200 NOK per person."}],note:"Norway is extremely expensive. Wages are among the highest in Europe and tipping is not embedded in the culture. Focus on genuine appreciation rather than obligation."},
+  {name:"San Marino",flag:"🇸🇲",currency:"EUR (€)",group:"other",culture:"San Marino is a microstate surrounded by Italy. Tipping customs mirror Italian norms — modest and optional.",categories:[{icon:"🍽️",label:"Restaurants",tip:"€1–3 per table",detail:"As in Italy, leave €1–3 per table if no servizio is included. Check the bill first."},{icon:"☕",label:"Cafés",tip:"Round up coins",detail:"Leave small coins on the bar counter. The Italian tradition of a bar tip applies here."},{icon:"🚕",label:"Taxis / Shuttles",tip:"Round up",detail:"San Marino is compact. Round up the fare — most journeys are short."},{icon:"🎒",label:"Tour Guides",tip:"€3–8 per person",detail:"Guided tours of the Three Towers and historic centre: €3–5 per person."},{icon:"🏨",label:"Hotels",tip:"€1–2 per night / bag",detail:"Housekeeping and bellhop: €1–2. San Marino has a small selection of excellent hotels."},{icon:"🛡️",label:"Crossbow & Pageant Events",tip:"€2–5",detail:"For costumed historical events and demonstrations, €2–5 for performers is appreciated."},{icon:"🏰",label:"Fortress Guides",tip:"€3–5",detail:"Private guides at Guaita or Cesta fortress: €3–5 for personalized tours."},{icon:"🍷",label:"Wine & Grappa Tours",tip:"€3–5",detail:"Sammarinese wine producers and grappa distilleries: €3–5 for tasting guides."}],note:"San Marino is visited mostly as a day trip from Rimini. Follow Italian customs — small, genuine tips for good service. Nothing is expected."},
+  {name:"Serbia",flag:"🇷🇸",currency:"RSD (din)",group:"other",culture:"Tipping is expected in Serbia, especially in Belgrade. 10% is the norm at restaurants. The hospitality is warm and generous.",categories:[{icon:"🍽️",label:"Restaurants",tip:"10%",detail:"10% is expected in Belgrade and Novi Sad. Leave cash directly — card tips are unreliable."},{icon:"☕",label:"Kafana & Cafés",tip:"Round up or 10%",detail:"Traditional kafana culture: round up the bill. At modern cafés, 10% is appreciated."},{icon:"🚕",label:"Taxis",tip:"Round up + 10%",detail:"Use Car:Go or Yandex apps. Add 10% to the fare for good drivers."},{icon:"🚌",label:"Private Transfers",tip:"200–500 din per trip",detail:"200–500 RSD for Belgrade city runs. 500–1000 RSD for airport transfers."},{icon:"🎒",label:"Tour Guides",tip:"300–600 din per person",detail:"Belgrade and Novi Sad tours: 300 RSD per person. Private guides: 600–1000 RSD per day."},{icon:"🏨",label:"Hotels",tip:"100–200 din per night",detail:"Housekeeping: 100–200 RSD per night. Bellhop: 100 RSD per bag."},{icon:"🎸",label:"Belgrade Nightlife & Bar Staff",tip:"10% or round up",detail:"Belgrade has one of Europe's best nightlife scenes — tip bar staff 10% or round up at clubs."},{icon:"🏛️",label:"Historical & Museum Guides",tip:"200–400 din",detail:"Guides at Kalemegdan Fortress or Nikola Tesla Museum: 200–400 RSD."}],note:"Serbia is excellent value and deeply hospitable. Belgrade's nightlife is legendary — tip your bar staff well. Tips in cash (RSD) are always preferred."},
+  {name:"Switzerland",flag:"🇨🇭",currency:"CHF (Fr)",group:"other",culture:"Service is included in Swiss prices by law. Tipping is optional and never obligatory. Rounding up is the most common gesture.",categories:[{icon:"🍽️",label:"Restaurants",tip:"Round up or 5%",detail:"Service is included. Rounding up to the nearest franc or adding 5% for excellent service is the norm. No pressure."},{icon:"☕",label:"Cafés & Bars",tip:"Round up",detail:"Leave the small change. Rounding up is the standard gesture — no obligation to add more."},{icon:"🚕",label:"Taxis",tip:"Round up + 5%",detail:"Round up to the nearest 5 CHF. Adding 5% for good service is appreciated."},{icon:"🚌",label:"Private Transfers",tip:"CHF 5–15 per trip",detail:"CHF 5–10 for city transfers. For full-day chauffeur hire, CHF 15–25."},{icon:"🎒",label:"Tour Guides",tip:"CHF 5–15 per person/day",detail:"Group tours: CHF 5–10 per person. Private guides: CHF 10–20 per person per day."},{icon:"🏨",label:"Hotels",tip:"CHF 2–5 per night / bag",detail:"Housekeeping: CHF 2–5 per night. Bellhop: CHF 2–3 per bag. Truly optional."},{icon:"⛷️",label:"Ski Instructors",tip:"CHF 10–30",detail:"Swiss ski instructors in Zermatt or St. Moritz: CHF 10–30 per person per half-day."},{icon:"🏔️",label:"Mountain Guides",tip:"CHF 20–50",detail:"For guided hikes up the Eiger or Jungfrau routes, CHF 20–50 per person per day is appropriate."}],note:"Switzerland is one of Europe's most expensive countries. Staff are very well paid and tipping is truly optional. Never feel pressured."},
+  {name:"Ukraine",flag:"🇺🇦",currency:"UAH (₴)",group:"other",culture:"Tipping is appreciated in Ukraine. 10% is the norm at restaurants. Please note current access may be limited due to the ongoing conflict.",categories:[{icon:"🍽️",label:"Restaurants",tip:"10%",detail:"10% is the standard at Kyiv and Lviv restaurants. Leave cash — it's more reliable."},{icon:"☕",label:"Cafés",tip:"Round up or 10%",detail:"Rounding up or 10% at cafés is appreciated. Lviv has a particularly vibrant café culture."},{icon:"🚕",label:"Taxis / Uber",tip:"Round up + 10%",detail:"Uber and Bolt operate in major cities. Round up and add 10% for good service."},{icon:"🚌",label:"Private Transfers",tip:"50–100 UAH per trip",detail:"50–100 UAH for city transfers. More for airport runs or longer journeys."},{icon:"🎒",label:"Tour Guides",tip:"50–150 UAH per person",detail:"Lviv old town tours: 50–100 UAH per person. Private historical guides: 150–300 UAH/day."},{icon:"🏨",label:"Hotels",tip:"20–50 UAH per night",detail:"Housekeeping: 20–50 UAH per night. Bellhop: 20 UAH per bag."},{icon:"🏛️",label:"Museum & Heritage Guides",tip:"50–100 UAH",detail:"Guides at the Lavra monastery or Lviv's old town: 50–100 UAH per person."},{icon:"🤝",label:"Aid & Volunteer Staff",tip:"Consider a donation",detail:"In the current context, consider supporting humanitarian organisations operating in Ukraine."}],note:"Ukraine is showing remarkable resilience. Tourism to safe areas like Lviv is welcomed — your visit and spending support the local economy directly."},
+  {name:"United Kingdom",flag:"🇬🇧",currency:"GBP (£)",group:"other",culture:"Check your bill for 'discretionary service charge' (10–12.5%). You may legally request its removal. Tips are welcomed but not mandatory.",categories:[{icon:"🍽️",label:"Restaurants",tip:"10–15% (if no service charge included)",detail:"If a service charge is already on the bill, you're covered. If not, 10–15% for good service is standard."},{icon:"🍺",label:"Pubs",tip:"Not customary / offer a drink",detail:"British pub culture doesn't typically involve tipping. Offering 'one for yourself' to the barman is the traditional gesture."},{icon:"🚕",label:"Taxis (Black Cabs)",tip:"10–15%",detail:"Round up or add 10–15%. For licensed black cabs in London, rounding up to the nearest pound plus change is standard."},{icon:"🚌",label:"Private Transfers",tip:"£5–15 per trip",detail:"£5–10 for airport runs. For full-day hires with a chauffeur, £15–25 is generous and appreciated."},{icon:"🎒",label:"Tour Guides",tip:"£5–15 per person/day",detail:"Group tours: £5–10 per person. Private guides: £15–20 per person per day, or more for exceptional service."},{icon:"🏨",label:"Hotels",tip:"£1–2 per night / bag",detail:"Housekeeping: £1–2 per night. Bellhop: £1–2 per bag. Tip directly in cash rather than adding to room charge."},{icon:"💇",label:"Hairdressers",tip:"10–15%",detail:"10–15% is standard. Tip the stylist directly in cash; assistants who wash hair may also receive £1–2."},{icon:"🎭",label:"Private Guides / Experiences",tip:"£10–20 per person",detail:"For private walking tours, food tours, or bespoke experiences, £10–20 per person is a thoughtful gesture."}],note:"Always check if service is already included. It's perfectly acceptable to ask the server 'is service included?' before tipping."},
+  {name:"Vatican City",flag:"🇻🇦",currency:"EUR (€)",group:"other",culture:"The Vatican is a sovereign state visited primarily by pilgrims and tourists. Tipping norms follow Italian customs. Most services are minimal.",categories:[{icon:"🍽️",label:"Restaurants (nearby)",tip:"€2–5 per table",detail:"Vatican-area restaurants follow Roman norms. Leave €2–5 if servizio is not included."},{icon:"☕",label:"Cafés",tip:"Round up coins",detail:"Leave small coins on the bar counter as in Rome. €0.10–0.50 is acknowledged."},{icon:"🎒",label:"Official Vatican Tour Guides",tip:"€10–20 per person",detail:"Licensed guides for the Vatican Museums and Sistine Chapel: €10–20 per person for private tours."},{icon:"🏛️",label:"Papal Audience Guides",tip:"€5–10 per person",detail:"For organized guided access to papal audiences, €5–10 per person is a kind gesture."},{icon:"🚕",label:"Taxis (from Rome)",tip:"Round up + 10%",detail:"Vatican has no taxis — you'll use Roman taxis. Round up and add 10%."},{icon:"🚌",label:"Private Transfers",tip:"€5–10 per trip",detail:"Follow Rome transfer norms. €5–10 for Vatican-area pickup and drop-off."},{icon:"🕍",label:"Church & Basilica Staff",tip:"Donation box only",detail:"Do not tip church attendants directly. Donations to the church collection are appropriate."},{icon:"🪖",label:"Swiss Guard",tip:"Never",detail:"The Papal Swiss Guard must never be tipped. They are ceremonial guards, not service staff."}],note:"The Vatican is unique — it is simultaneously a religious site and a sovereign state. Follow Italian customs for tipping. Never attempt to tip the Swiss Guard."},
+  {name:"Armenia",flag:"🇦🇲",currency:"AMD (֏)",group:"trans",culture:"Tipping is appreciated in Armenia and growing in Yerevan's restaurant scene. 10% is becoming standard. The hospitality is legendary.",categories:[{icon:"🍽️",label:"Restaurants",tip:"10%",detail:"10% is increasingly expected in Yerevan. In traditional family restaurants, rounding up is fine."},{icon:"☕",label:"Cafés",tip:"Round up",detail:"Leave the small change. Yerevan has an excellent café culture."},{icon:"🚕",label:"Taxis / GG (local app)",tip:"Round up + 10%",detail:"Use GG app for fixed prices. Add 10% for good drivers."},{icon:"🚌",label:"Private Transfers",tip:"1000–2000 AMD per trip",detail:"1000–2000 AMD for Yerevan transfers. More for trips to Garni or Geghard."},{icon:"🎒",label:"Tour Guides",tip:"1000–3000 AMD per person",detail:"Yerevan and Tatev monastery tours: 1000–2000 AMD per person. Private guides: 3000–5000 AMD/day."},{icon:"🏨",label:"Hotels",tip:"500–1000 AMD per night",detail:"Housekeeping: 500–1000 AMD per night. Bellhop: 300–500 AMD per bag."},{icon:"⛪",label:"Monastery & Heritage Guides",tip:"1000–2000 AMD",detail:"Guides at Geghard or Haghpat monasteries: 1000–2000 AMD per person."},{icon:"🍷",label:"Wine & Brandy Tours",tip:"1000–2000 AMD",detail:"Ararat Brandy and Areni wine tours: 1000–2000 AMD per person for guides."}],note:"Armenia is an ancient civilization with extraordinary food, wine, and hospitality. Your tip is genuinely meaningful — wages are modest and appreciation is heartfelt."},
+  {name:"Azerbaijan",flag:"🇦🇿",currency:"AZN (₼)",group:"trans",culture:"Tipping is appreciated in Azerbaijan, especially in Baku. 10% at restaurants is standard. The culture values generous hospitality.",categories:[{icon:"🍽️",label:"Restaurants",tip:"10%",detail:"10% is the norm in Baku and tourist restaurants. Tip in cash directly to the server."},{icon:"☕",label:"Tea Houses & Cafés",tip:"Round up",detail:"Traditional çayxana (tea houses) — leave small change. At modern cafés, round up or 10%."},{icon:"🚕",label:"Taxis",tip:"Round up + 10%",detail:"Agree fares beforehand in Baku. Add 10% for good service."},{icon:"🚌",label:"Private Transfers",tip:"2–5 AZN per trip",detail:"2–5 AZN for Baku city runs. 5–10 AZN for airport or longer transfers."},{icon:"🎒",label:"Tour Guides",tip:"5–10 AZN per person/day",detail:"Baku old city and Gobustan tours: 5 AZN per person. Private guides: 8–15 AZN/day."},{icon:"🏨",label:"Hotels",tip:"2–5 AZN per night / bag",detail:"Housekeeping: 2–5 AZN per night. Bellhop: 1–2 AZN per bag."},{icon:"🛢️",label:"Mud Volcano & Fire Tours",tip:"3–5 AZN",detail:"Drivers and guides to the Yanar Dag fire mountain or mud volcanoes: 3–5 AZN per person."},{icon:"🏰",label:"Walled City Guides",tip:"3–5 AZN",detail:"Licensed guides in Baku's UNESCO-listed Icheri Sheher: 3–5 AZN per person."}],note:"Azerbaijan blends East and West. Baku is a modern, confident city — tipping is appreciated and growing. Always tip in local currency (AZN) where possible."},
+  {name:"Georgia",flag:"🇬🇪",currency:"GEL (₾)",group:"trans",culture:"Tipping is appreciated in Georgia. 10% at restaurants is the norm in Tbilisi. The famous Georgian hospitality means your visit is already cherished.",categories:[{icon:"🍽️",label:"Restaurants",tip:"10%",detail:"10% is the standard in Tbilisi and Batumi. Leave cash directly with the server."},{icon:"☕",label:"Cafés",tip:"Round up",detail:"Leave the small change or round up. Tbilisi has a vibrant café culture."},{icon:"🚕",label:"Taxis / Bolt / Yandex",tip:"Round up + 10%",detail:"Use Bolt or Yandex for fixed prices. Add 10% for good drivers."},{icon:"🚌",label:"Private Transfers",tip:"5–10 GEL per trip",detail:"5–10 GEL for Tbilisi transfers. 10–20 GEL for Kazbegi or Kakheti wine region trips."},{icon:"🎒",label:"Tour Guides",tip:"10–20 GEL per person/day",detail:"Tbilisi old town tours: 10 GEL per person. Vardzia or Kakheti: 15–20 GEL."},{icon:"🏨",label:"Hotels",tip:"3–5 GEL per night / bag",detail:"Housekeeping: 3–5 GEL per night. Bellhop: 2–3 GEL per bag."},{icon:"🍷",label:"Wine Cellar & Qvevri Tours",tip:"5–10 GEL",detail:"Georgia is the birthplace of wine. Kakheti wine tour guides: 5–10 GEL per person."},{icon:"🏔️",label:"Mountain & Trekking Guides",tip:"10–20 GEL",detail:"Guides for Kazbegi, Svaneti, or Tusheti treks: 10–20 GEL per person per day."}],note:"Georgia's 'tamada' (toastmaster) tradition means hospitality is sacred. The phrase 'mgzavrobas didi madloba' (many thanks for travelling with me) delights local guides."},
+  {name:"Kazakhstan",flag:"🇰🇿",currency:"KZT (₸)",group:"trans",culture:"Tipping is growing in Kazakhstan, particularly in Almaty and Astana. 10% is appreciated at restaurants. The culture is generous and hospitable.",categories:[{icon:"🍽️",label:"Restaurants",tip:"10%",detail:"10% is the growing norm in Almaty and Astana. Leave cash — card tips may not reach staff."},{icon:"☕",label:"Cafés",tip:"Round up or 5–10%",detail:"Leave the small change or 5–10% at Almaty's growing café scene."},{icon:"🚕",label:"Taxis / Yandex",tip:"Round up + 10%",detail:"Use Yandex for fixed prices. Add 10% for good service."},{icon:"🚌",label:"Private Transfers",tip:"500–1000 KZT per trip",detail:"500–1000 KZT for city runs. More for airport or long-distance transfers."},{icon:"🎒",label:"Tour Guides",tip:"1000–2000 KZT per person",detail:"Almaty and Astana city tours: 1000 KZT per person. Charyn Canyon or steppe guides: 1500–2500 KZT/day."},{icon:"🏨",label:"Hotels",tip:"500–1000 KZT per night",detail:"Housekeeping and bellhop: 500–1000 KZT. Many hotels are international chains."},{icon:"🏕️",label:"Yurt Camp Hosts",tip:"1000–2000 KZT",detail:"For traditional yurt stays on the steppe, tip your hosts 1000–2000 KZT per night."},{icon:"🏔️",label:"Mountain & Ski Guides",tip:"1000–2000 KZT",detail:"Shymbulak ski resort instructors and Tian Shan mountain guides: 1000–2000 KZT per person."}],note:"Kazakhstan is vast and still developing its tourism infrastructure. Your tip is appreciated and helps support the growing hospitality sector."},
+  {name:"Russia",flag:"🇷🇺",currency:"RUB (₽)",group:"trans",culture:"Note: International travel to Russia is significantly restricted. These customs reflect pre-2022 norms for historical reference only.",categories:[{icon:"🍽️",label:"Restaurants",tip:"10–15%",detail:"10–15% was standard at Moscow and St. Petersburg restaurants. Always in cash."},{icon:"☕",label:"Cafés & Bars",tip:"Round up or 10%",detail:"Rounding up or 10% at cafés was appreciated."},{icon:"🚕",label:"Taxis",tip:"Round up",detail:"Fixed-price apps were standard. Rounding up was the norm."},{icon:"🚌",label:"Private Transfers",tip:"150–300 RUB per trip",detail:"Typical for city or airport transfers prior to 2022."},{icon:"🎒",label:"Tour Guides",tip:"200–500 RUB per person",detail:"Hermitage and Kremlin guided tours: 200–500 RUB per person per day."},{icon:"🏨",label:"Hotels",tip:"50–200 RUB per service",detail:"Housekeeping and bellhop: 50–200 RUB. Standard at international hotel chains."},{icon:"🎭",label:"Bolshoi & Opera",tip:"50–100 RUB",detail:"Coat check staff at the Bolshoi Theatre typically received 50–100 RUB."},{icon:"⚠️",label:"Travel Advisory",tip:"Check current guidance",detail:"Most governments advise against all travel to Russia. Check your national foreign office for current advice."}],note:"⚠️ Most Western governments advise against all travel to Russia. This information is provided for historical reference only. Please check your government's current travel advisory."},
+  {name:"Turkey",flag:"🇹🇷",currency:"TRY (₺)",group:"trans",culture:"Tipping is expected in Turkey. 10–15% at restaurants is the norm. Turkey has a strong hospitality culture and service staff rely on tips.",categories:[{icon:"🍽️",label:"Restaurants",tip:"10–15%",detail:"10–15% is expected. Leave cash on the table or hand directly to the server. Card tips may not reach staff."},{icon:"☕",label:"Çay & Coffee Houses",tip:"Round up",detail:"Leave small change at traditional çay houses. At modern cafés, rounding up or 10% is appreciated."},{icon:"🚕",label:"Taxis",tip:"Round up + 10%",detail:"Insist on the meter being used. Add 10% for good drivers. Use apps like BiTaksi for fixed prices."},{icon:"🚌",label:"Private Transfers",tip:"50–100 TRY per trip",detail:"50–100 TRY for Istanbul or resort transfers. For full-day hire, 100–200 TRY."},{icon:"🎒",label:"Tour Guides",tip:"50–150 TRY per person/day",detail:"Istanbul and Cappadocia tours: 50–100 TRY per person. Private guides: 150–300 TRY/day."},{icon:"🏨",label:"Hotels",tip:"20–50 TRY per night / bag",detail:"Housekeeping: 20–50 TRY per night. Bellhop: 10–20 TRY per bag."},{icon:"🏺",label:"Carpet Shop Guides",tip:"Not expected",detail:"Carpet shop 'guides' in Istanbul's Grand Bazaar are commission-based — no tip needed."},{icon:"🛁",label:"Hamam (Turkish Bath) Staff",tip:"10–15%",detail:"Hamam attendants (tellak) traditionally receive 10–15% of the bath price as a tip."}],note:"Turkey's hospitality industry relies heavily on tipping. Inflation has been significant recently — tip in Turkish lira rather than foreign currency where possible."},
+];
 
-  </main>
+const GROUPS = {eu:"EU Member State", other:"European Nation", trans:"Transcontinental"};
+let selectedIdx = 0, openCatKey = null, recentIdxs = [];
 
-  <script>
-    const COUNTRIES = [
-      {
-        name:"France", flag:"🇫🇷", currency:"EUR (€)",
-        culture:"Service charge ('service compris') is legally included in all restaurant bills. Additional tipping is a bonus, not expected.",
-        categories:[
-          {icon:"🍽️",label:"Restaurants",tip:"Round up or leave €1–2",detail:"Service is included by law. Rounding up the bill or leaving small coins is appreciated but optional."},
-          {icon:"☕",label:"Cafés & Bars",tip:"Round up coins",detail:"Leave the small change on the table or bar. €0.50–1 is plenty for coffee or drinks."},
-          {icon:"🚕",label:"Taxis / Uber",tip:"Round up to nearest €",detail:"Round up the fare to the nearest euro. For longer trips, rounding up €1–2 is generous."},
-          {icon:"🚌",label:"Private Transfers",tip:"€5–15 per trip",detail:"For airport transfers, €5–10 is standard. For longer or multi-day transfers, €10–15 per driver per day."},
-          {icon:"🎒",label:"Tour Guides",tip:"€10–20 per person/day",detail:"For private guides, €15–20 per person per day. For group tours, €5–10 per person is appreciated."},
-          {icon:"🏨",label:"Hotels",tip:"€1–2 per night / per bag",detail:"Leave €1–2 per night for housekeeping. Tip bellhops €1–2 per bag. Concierge: €5–10 for special services."},
-          {icon:"💆",label:"Spas & Salons",tip:"€5–10 or 10%",detail:"Tipping is not mandatory but 10% for good service is appreciated at upscale spas."},
-          {icon:"🎭",label:"Experiences & Drivers",tip:"€10–20 per person",detail:"For private experiences like wine tours or cooking classes with a driver, €10–20 per person is generous."},
-        ],
-        note:"The French do not tip as much as Americans. Over-tipping can sometimes feel awkward. Keep it modest and genuine."
-      },
-      {
-        name:"Italy", flag:"🇮🇹", currency:"EUR (€)",
-        culture:"Check for 'coperto' (cover charge) and 'servizio' (service charge) on bills. If servizio is included, no additional tip needed.",
-        categories:[
-          {icon:"🍽️",label:"Restaurants",tip:"€2–5 per table",detail:"If servizio (~10–15%) is not included, leaving €2–5 per table is appropriate. Never tip on top of a servizio charge."},
-          {icon:"☕",label:"Cafés & Bars",tip:"€0.10–0.50 coin",detail:"At a bar, it's customary to leave small coins on the bar counter when paying. Even €0.10 is acknowledged."},
-          {icon:"🚕",label:"Taxis",tip:"Round up + €0.50–1",detail:"Round up the fare. For help with luggage, add €0.50–1 per bag. Tipping beyond rounding is not expected."},
-          {icon:"🚌",label:"Private Transfers",tip:"€5–15 per trip",detail:"€5–10 for standard airport runs. For full-day private transfers with a driver, €10–15 is appropriate."},
-          {icon:"🎒",label:"Tour Guides",tip:"€10–15 per person/day",detail:"Private guides: €15–20 per person per day. Group tour guides: €5–10 per person. More for exceptional service."},
-          {icon:"🏨",label:"Hotels",tip:"€1–2 per night / bag",detail:"Housekeeping: €1–2 per night left daily (staff rotate). Porterage: €1–2 per bag. Concierge: €5–20 for theatre tickets, etc."},
-          {icon:"🚣",label:"Gondoliers / Boat Drivers",tip:"€5–10",detail:"For gondola rides, €5–10 on top of the fare shows appreciation, especially for singing or extended tours."},
-          {icon:"🍕",label:"Delivery / Takeaway",tip:"€1–2",detail:"Not expected but appreciated, particularly for longer deliveries. €1–2 is a kind gesture."},
-        ],
-        note:"Italy does not have a strong tipping culture. Small gestures are warmly received; large tips can cause confusion."
-      },
-      {
-        name:"Spain", flag:"🇪🇸", currency:"EUR (€)",
-        culture:"Tipping is entirely discretionary. Spaniards rarely tip, but tourists are generally expected to leave something small.",
-        categories:[
-          {icon:"🍽️",label:"Restaurants",tip:"5–10% or round up",detail:"Locals often leave small coins. Tourists can leave 5–10% for good service. Never tip for mediocre service — it's not obligatory."},
-          {icon:"🍺",label:"Tapas Bars",tip:"Round up coins",detail:"Leave the small change — €0.50–1 per person. Tipping is casual and informal in bar settings."},
-          {icon:"🚕",label:"Taxis",tip:"Round up the fare",detail:"Simply round up the meter fare. For airport trips or help with bags, adding €1–2 is appreciated."},
-          {icon:"🚌",label:"Private Transfers",tip:"€5–10 per trip",detail:"€5 for a standard transfer. For full-day hires, €10–15 is fair. Tip at the end of the service."},
-          {icon:"🎒",label:"Tour Guides",tip:"€5–15 per person/day",detail:"Private guides: €10–15 per person per day. Group tours: €3–5 per person. More for wine country or specialized tours."},
-          {icon:"🏨",label:"Hotels",tip:"€1 per night / bag",detail:"Housekeeping: €1 per night. Bellhop: €1 per bag. Not mandatory but always appreciated, especially in high-end properties."},
-          {icon:"💇",label:"Hairdressers / Beauty",tip:"5–10%",detail:"5–10% for good service at salons. Not customary at budget establishments."},
-          {icon:"⛷️",label:"Ski / Activity Guides",tip:"€10–20 per person",detail:"For ski instructors or adventure guides, €10–20 per person per day based on quality of experience."},
-        ],
-        note:"Spain has one of Europe's lowest tipping cultures. Locals seldom tip. Small gestures are gracious; large tips are unusual."
-      },
-      {
-        name:"Germany", flag:"🇩🇪", currency:"EUR (€)",
-        culture:"Tipping ('Trinkgeld') is customary but modest. The standard is to round up or add 5–10%. You tell the server the total you want to pay.",
-        categories:[
-          {icon:"🍽️",label:"Restaurants",tip:"5–10%",detail:"Tell the server the total you'd like to pay when handing over cash. E.g., bill is €23, say 'Make it €25.' For card payments, add 5–10%."},
-          {icon:"🍺",label:"Beer Halls & Bars",tip:"Round up €0.50–1",detail:"Round up to the nearest euro. Larger tips are uncommon in casual beer halls and pubs."},
-          {icon:"🚕",label:"Taxis",tip:"Round up + 5–10%",detail:"Round up the fare and add about 5–10%. For airport transfers or help with heavy luggage, tip generously."},
-          {icon:"🚌",label:"Private Transfers",tip:"€5–15 per trip",detail:"€5–10 for city transfers. For full-day chauffeur services, €15–20 is appropriate and appreciated."},
-          {icon:"🎒",label:"Tour Guides",tip:"€5–10 per person/day",detail:"For group tours, €3–5 per person. Private guides: €10–15 per person. Tip at end of tour directly."},
-          {icon:"🏨",label:"Hotels",tip:"€1–2 per night / bag",detail:"Housekeeping: €1–2 per night. Porterage: €1–2 per bag. Concierge: €5–10 for booking or arrangements."},
-          {icon:"🛻",label:"Delivery Services",tip:"€1–2",detail:"€1–2 per delivery is considerate, especially in bad weather or for multiple items."},
-          {icon:"💈",label:"Hair & Beauty",tip:"10%",detail:"About 10% is standard at salons. Round up for quick services like a trim."},
-        ],
-        note:"Germans appreciate efficiency and don't expect large tips. The 'round up' method is very common and perfectly acceptable."
-      },
-      {
-        name:"United Kingdom", flag:"🇬🇧", currency:"GBP (£)",
-        culture:"Check your bill for 'discretionary service charge' (10–12.5%). You may legally request its removal. Tips are welcomed but not mandatory.",
-        categories:[
-          {icon:"🍽️",label:"Restaurants",tip:"10–15% (if no service charge included)",detail:"If a service charge is already on the bill, you're covered. If not, 10–15% for good service is standard."},
-          {icon:"🍺",label:"Pubs",tip:"Not customary / offer a drink",detail:"British pub culture doesn't typically involve tipping. Offering 'one for yourself' to the barman is the traditional gesture."},
-          {icon:"🚕",label:"Taxis (Black Cabs)",tip:"10–15%",detail:"Round up or add 10–15%. For licensed black cabs in London, rounding up to the nearest pound plus change is standard."},
-          {icon:"🚌",label:"Private Transfers",tip:"£5–15 per trip",detail:"£5–10 for airport runs. For full-day hires with a chauffeur, £15–25 is generous and appreciated."},
-          {icon:"🎒",label:"Tour Guides",tip:"£5–15 per person/day",detail:"Group tours: £5–10 per person. Private guides: £15–20 per person per day, or more for exceptional service."},
-          {icon:"🏨",label:"Hotels",tip:"£1–2 per night / bag",detail:"Housekeeping: £1–2 per night. Bellhop: £1–2 per bag. Tip directly in cash rather than adding to room charge."},
-          {icon:"💇",label:"Hairdressers",tip:"10–15%",detail:"10–15% is standard. Tip the stylist directly in cash; assistants who wash hair may also receive £1–2."},
-          {icon:"🎭",label:"Private Guides / Experiences",tip:"£10–20 per person",detail:"For private walking tours, food tours, or bespoke experiences, £10–20 per person is a thoughtful gesture."},
-        ],
-        note:"Always check if service is already included. It's perfectly acceptable to ask the server 'is service included?' before tipping."
-      },
-      {
-        name:"Greece", flag:"🇬🇷", currency:"EUR (€)",
-        culture:"Tipping is warmly appreciated but not strictly expected. Cash tips are strongly preferred as card tips may not reach the staff.",
-        categories:[
-          {icon:"🍽️",label:"Restaurants",tip:"5–10% in cash",detail:"Leave cash on the table, even if paying by card. 5–10% is generous. Round up for simple taverna meals."},
-          {icon:"☕",label:"Cafés",tip:"€0.50–1 per drink",detail:"Greeks often leave small change at the café. Rounding up the bill or leaving €1 is appreciated."},
-          {icon:"🚕",label:"Taxis",tip:"Round up + small tip",detail:"Drivers often round up the fare themselves; you can add €0.50–1 on top for good service or luggage help."},
-          {icon:"🚌",label:"Private Transfers",tip:"€5–10 per trip",detail:"For transfers to/from airports or ports, €5–10 is a generous tip. More for longer island transfers."},
-          {icon:"🎒",label:"Tour Guides",tip:"€5–15 per person/day",detail:"Local guides working hard in summer heat especially appreciate tips. €10–15 per person for private tours."},
-          {icon:"🏨",label:"Hotels",tip:"€1–2 per night",detail:"Leave daily in the room in cash. Tip bellhops €1–2 per bag. Boat or resort staff: €2–5 per day."},
-          {icon:"⛵",label:"Boat Captains / Crew",tip:"€5–20 per person",detail:"For private boat tours or charters, tip the captain €10–20 per person for a day trip. More for multi-day charters."},
-          {icon:"🏝️",label:"Resort / Villa Staff",tip:"€2–5 per day",detail:"For villa or resort stays, tip housekeeping, pool staff, and butlers €2–5 per day in cash."},
-        ],
-        note:"Always tip in cash in Greece. Many establishments are cash-only, and card tips rarely reach workers directly."
-      },
-      {
-        name:"Portugal", flag:"🇵🇹", currency:"EUR (€)",
-        culture:"Tipping is appreciated but not obligatory. Portugal has one of the more relaxed tipping cultures in Western Europe.",
-        categories:[
-          {icon:"🍽️",label:"Restaurants",tip:"5–10%",detail:"Rounding up or leaving 5–10% is welcomed. Some restaurants add a couvert (bread/olives charge) — this is not a service charge."},
-          {icon:"☕",label:"Cafés & Pastelarias",tip:"€0.20–0.50 coins",detail:"Leave small change on the counter or table. Even €0.20 is acknowledged with a smile."},
-          {icon:"🚕",label:"Taxis",tip:"Round up fare",detail:"Rounding up to the nearest euro is sufficient. Add €1 for help with bags or during late-night trips."},
-          {icon:"🚌",label:"Private Transfers",tip:"€5–10 per trip",detail:"€5 for standard airport transfers. For full-day drivers, €10–15 is fair."},
-          {icon:"🎒",label:"Tour Guides",tip:"€5–10 per person/day",detail:"Group tours: €3–5 per person. Private guides: €10–15 per person. Sintra and Alentejo winery guides especially appreciate tips."},
-          {icon:"🏨",label:"Hotels",tip:"€1 per night / bag",detail:"Housekeeping: €1 per night. Bellhop: €1 per bag. Smaller and family-run guesthouses appreciate any gesture."},
-          {icon:"🎸",label:"Fado Performers / Musicians",tip:"€2–5",detail:"If you attend a fado dinner, leaving €2–5 per person for performers is customary and appreciative."},
-          {icon:"🏄",label:"Surf / Activity Instructors",tip:"€5–10",detail:"Surf instructors and outdoor guides appreciate €5–10 for good lessons or half-day experiences."},
-        ],
-        note:"Portuguese service workers are often underpaid. Tipping, while not expected, makes a meaningful difference."
-      },
-      {
-        name:"Netherlands", flag:"🇳🇱", currency:"EUR (€)",
-        culture:"The Dutch are famously egalitarian. Tipping is not a cultural expectation, but a 5–10% tip for great service is always well-received.",
-        categories:[
-          {icon:"🍽️",label:"Restaurants",tip:"5–10% for good service",detail:"Not expected, but 5–10% for excellent service is a kind gesture. The Dutch are unlikely to tip for average service."},
-          {icon:"🍻",label:"Bars & Pubs",tip:"Round up or €1",detail:"Rounding up is the norm. Some locals skip tipping entirely at bars; €1 per round for good service is friendly."},
-          {icon:"🚕",label:"Taxis",tip:"Round up + 5%",detail:"Round up the fare. A 5% tip is appreciated but not assumed. Uber/Bolt drivers: round up via app."},
-          {icon:"🚌",label:"Private Transfers",tip:"€5–10 per trip",detail:"For premium transfers, €5–10 is appropriate. Full-day chauffeur: €10–15 at the end of the day."},
-          {icon:"🎒",label:"Tour Guides",tip:"€5–10 per person/day",detail:"Canal boat tours: €2–5 per person. Private city or bike guides: €5–10 per person. Windmill or cheese tours: similar."},
-          {icon:"🏨",label:"Hotels",tip:"€1–2 per service",detail:"Bellhop: €1–2 per bag. Housekeeping: €1–2 per night. Not strictly expected but appreciated at luxury hotels."},
-          {icon:"🚲",label:"Bike Rental / Guides",tip:"€3–5",detail:"For guided bike tours through Amsterdam or the countryside, €5 per person is a considerate tip."},
-          {icon:"🛥️",label:"Canal Boat Operators",tip:"€3–10",detail:"For private canal tours, €5–10 per person depending on the length and quality of the experience."},
-        ],
-        note:"The Netherlands has a strong minimum wage and social safety net. Tipping is truly optional here — never feel obligated."
-      },
-    ];
-
-    // ── State ────────────────────────────────────────
-    let selectedIdx = 0;
-    let openCatKey  = null;
-    let searchTerm  = '';
-
-    // ── Render country tabs ──────────────────────────
-    function renderTabs() {
-      const container = document.getElementById('countryTabs');
-      container.innerHTML = '';
-      COUNTRIES.forEach((c, i) => {
-        if (!c.name.toLowerCase().includes(searchTerm.toLowerCase())) return;
-        const btn = document.createElement('button');
-        btn.className = 'tab-btn' + (i === selectedIdx ? ' active' : '');
-        btn.setAttribute('aria-pressed', i === selectedIdx);
-        btn.innerHTML = `<span class="tab-flag">${c.flag}</span>${c.name}`;
-        btn.addEventListener('click', () => {
-          selectedIdx = i;
-          openCatKey = null;
-          renderTabs();
-          renderPanel();
-        });
-        container.appendChild(btn);
-      });
-    }
-
-    // ── Render country panel ─────────────────────────
-    function renderPanel() {
-      const c = COUNTRIES[selectedIdx];
-      const panel = document.getElementById('countryPanel');
-
-      const catItems = c.categories.map((cat, i) => {
-        const key = `${selectedIdx}-${i}`;
-        const isOpen = openCatKey === key;
-        return `
-          <div class="cat-item${isOpen ? ' open' : ''}" data-key="${key}" role="button" aria-expanded="${isOpen}" tabindex="0">
-            <div class="cat-row">
-              <span class="cat-icon">${cat.icon}</span>
-              <div class="cat-text">
-                <span class="cat-label">${cat.label}</span>
-                <span class="cat-tip">${cat.tip}</span>
-              </div>
-            </div>
-            <div class="cat-detail">${cat.detail}</div>
-          </div>`;
-      }).join('');
-
-      panel.innerHTML = `
-        <div class="card">
-          <div class="card-header">
-            <span class="country-flag">${c.flag}</span>
-            <div class="country-meta">
-              <div class="country-title-row">
-                <span class="country-name">${c.name}</span>
-                <span class="currency-badge">${c.currency}</span>
-              </div>
-              <p class="country-culture">${c.culture}</p>
-            </div>
-          </div>
-          <div class="cat-grid">${catItems}</div>
-          <div class="card-note">
-            <span class="note-icon">ℹ</span>
-            <p class="note-text">${c.note}</p>
-          </div>
-        </div>`;
-
-      // Attach click + keyboard handlers to category items
-      panel.querySelectorAll('.cat-item').forEach(el => {
-        const activate = () => {
-          const key = el.dataset.key;
-          openCatKey = openCatKey === key ? null : key;
-          renderPanel();
-        };
-        el.addEventListener('click', activate);
-        el.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); activate(); } });
-      });
-    }
-
-    // ── Search handler ───────────────────────────────
-    document.getElementById('countrySearch').addEventListener('input', e => {
-      searchTerm = e.target.value;
-      renderTabs();
+function buildDropdown() {
+  const sel = document.getElementById('countrySelect');
+  const groups = {eu:[], other:[], trans:[]};
+  COUNTRIES.forEach((c,i) => groups[c.group].push({c,i}));
+  const labels = {eu:'🇪🇺 European Union (27 Members)', other:'🌍 Other European Nations', trans:'🌐 Transcontinental Nations'};
+  Object.entries(labels).forEach(([key,label]) => {
+    const og = document.createElement('optgroup');
+    og.label = label;
+    groups[key].forEach(({c,i}) => {
+      const opt = document.createElement('option');
+      opt.value = i; opt.textContent = c.flag + ' ' + c.name;
+      if (i===selectedIdx) opt.selected = true;
+      og.appendChild(opt);
     });
+    sel.appendChild(og);
+  });
+  sel.addEventListener('change', e => {
+    selectedIdx = parseInt(e.target.value); openCatKey = null;
+    pushRecent(selectedIdx); renderRecent(); renderPanel();
+  });
+}
 
-    // ── Init ─────────────────────────────────────────
-    renderTabs();
-    renderPanel();
-  </script>
+function pushRecent(idx) {
+  recentIdxs = recentIdxs.filter(i => i!==idx);
+  recentIdxs.unshift(idx);
+  if (recentIdxs.length > 3) recentIdxs = recentIdxs.slice(0,3);
+}
 
+function renderRecent() {
+  const container = document.getElementById('recentFlags');
+  container.innerHTML = '';
+  recentIdxs.forEach(idx => {
+    const c = COUNTRIES[idx];
+    const btn = document.createElement('button');
+    btn.className = 'recent-flag-btn';
+    btn.innerHTML = '<span class="rflag">' + c.flag + '</span>' + c.name;
+    btn.addEventListener('click', () => {
+      selectedIdx = idx; openCatKey = null;
+      document.getElementById('countrySelect').value = idx;
+      pushRecent(idx); renderRecent(); renderPanel();
+    });
+    container.appendChild(btn);
+  });
+}
+
+function renderPanel() {
+  const c = COUNTRIES[selectedIdx];
+  const panel = document.getElementById('countryPanel');
+  const groupBadge = '<span class="group-badge group-' + c.group + '">' + GROUPS[c.group] + '</span>';
+  const catItems = c.categories.map((cat,i) => {
+    const key = selectedIdx + '-' + i;
+    const isOpen = openCatKey === key;
+    return '<div class="cat-item' + (isOpen?' open':'') + '" data-key="' + key + '" role="button" aria-expanded="' + isOpen + '" tabindex="0"><div class="cat-row"><span class="cat-icon">' + cat.icon + '</span><div class="cat-text"><span class="cat-label">' + cat.label + '</span><span class="cat-tip">' + cat.tip + '</span></div></div><div class="cat-detail">' + cat.detail + '</div></div>';
+  }).join('');
+  panel.innerHTML = '<div class="card"><div class="card-header"><span class="country-flag">' + c.flag + '</span><div class="country-meta"><div class="country-title-row"><span class="country-name">' + c.name + '</span><span class="currency-badge">' + c.currency + '</span>' + groupBadge + '</div><p class="country-culture">' + c.culture + '</p></div></div><div class="cat-grid">' + catItems + '</div><div class="card-note"><span class="note-icon">i</span><p class="note-text">' + c.note + '</p></div></div>';
+  panel.querySelectorAll('.cat-item').forEach(el => {
+    const activate = () => { openCatKey = openCatKey===el.dataset.key?null:el.dataset.key; renderPanel(); };
+    el.addEventListener('click', activate);
+    el.addEventListener('keydown', e => { if(e.key==='Enter'||e.key===' '){e.preventDefault();activate();} });
+  });
+  window.scrollTo({top:document.querySelector('.main').offsetTop-16,behavior:'smooth'});
+}
+
+buildDropdown(); pushRecent(0); renderRecent(); renderPanel();
+</script>
 </body>
 </html>
