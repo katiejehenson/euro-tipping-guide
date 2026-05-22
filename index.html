@@ -17,14 +17,14 @@
     :root {
       --primary:    #3EE7C6;
       --secondary:  #7CE9E5;
-      --light:      #B1E9F3;
-      --navy:       #2B4A6F;
-      --navy-dark:  #1e3550;
-      --navy-mid:   #243d5e;
-      --navy-deep:  #1a3050;
-      --white:      #F0FAFE;
-      --muted:      #7aafc8;
-      --faint:      #3d6a8a;
+      --light:      #D6F5FB;
+      --navy:       #1C3A58;
+      --navy-dark:  #162f4a;
+      --navy-mid:   #1e3d5c;
+      --navy-deep:  #122640;
+      --white:      #F4FCFF;
+      --muted:      #90cce0;
+      --faint:      #5a96b8;
       --font:       'Raleway', sans-serif;
     }
 
@@ -164,10 +164,11 @@
       background: var(--navy-mid);
       border-left-color: var(--primary);
     }
-    .cat-row { display: flex; align-items: center; gap: 10px; }
-    .cat-icon { font-size: 20px; flex-shrink: 0; }
-    .cat-label { font-weight: 500; color: var(--light); font-size: 13px; flex: 1; }
-    .cat-tip { color: var(--primary); font-size: 13px; font-weight: 700; white-space: nowrap; }
+    .cat-row { display: flex; align-items: flex-start; gap: 10px; }
+    .cat-icon { font-size: 20px; flex-shrink: 0; margin-top: 1px; }
+    .cat-text { flex: 1; min-width: 0; }
+    .cat-label { font-weight: 600; color: var(--light); font-size: 13px; display: block; margin-bottom: 2px; }
+    .cat-tip { color: var(--primary); font-size: 12px; font-weight: 700; display: block; line-height: 1.4; }
     .cat-detail {
       margin-top: 8px; padding-top: 8px;
       border-top: 1px solid color-mix(in srgb, var(--primary) 18%, transparent);
@@ -184,7 +185,7 @@
       display: flex; gap: 10px; align-items: flex-start;
     }
     .note-icon { color: var(--secondary); font-size: 15px; margin-top: 1px; flex-shrink: 0; }
-    .note-text { color: var(--faint); font-size: 12px; line-height: 1.6; font-style: italic; font-weight: 400; }
+    .note-text { color: var(--muted); font-size: 12px; line-height: 1.6; font-style: italic; font-weight: 400; }
 
     /* ── Section headers ──────────────────────────── */
     .section-header {
@@ -207,7 +208,7 @@
     .transfer-icon { font-size: 18px; }
     .transfer-label { color: var(--light); font-size: 13px; font-weight: 500; }
     .transfer-range { color: var(--primary); font-size: 14px; font-weight: 700; margin-bottom: 3px; }
-    .transfer-note { color: var(--faint); font-size: 11px; font-weight: 400; }
+    .transfer-note { color: var(--muted); font-size: 11px; font-weight: 400; }
 
     /* ── Etiquette tips ───────────────────────────── */
     .etiquette-pad { padding: 20px 24px; }
@@ -222,7 +223,7 @@
       border-left: 3px solid color-mix(in srgb, var(--primary) 55%, transparent);
     }
     .etiquette-title { color: var(--primary); font-size: 13px; font-weight: 700; margin-bottom: 4px; }
-    .etiquette-body { color: var(--faint); font-size: 12px; line-height: 1.55; font-weight: 400; }
+    .etiquette-body { color: var(--muted); font-size: 12px; line-height: 1.55; font-weight: 400; }
 
     /* ── Footer ───────────────────────────────────── */
     .footer {
@@ -421,7 +422,7 @@
         name:"United Kingdom", flag:"🇬🇧", currency:"GBP (£)",
         culture:"Check your bill for 'discretionary service charge' (10–12.5%). You may legally request its removal. Tips are welcomed but not mandatory.",
         categories:[
-          {icon:"🍽️",label:"Restaurants",tip:"10–15% if no service charge",detail:"If a service charge is already on the bill, you're covered. If not, 10–15% for good service is standard."},
+          {icon:"🍽️",label:"Restaurants",tip:"10–15% (if no service charge included)",detail:"If a service charge is already on the bill, you're covered. If not, 10–15% for good service is standard."},
           {icon:"🍺",label:"Pubs",tip:"Not customary / offer a drink",detail:"British pub culture doesn't typically involve tipping. Offering 'one for yourself' to the barman is the traditional gesture."},
           {icon:"🚕",label:"Taxis (Black Cabs)",tip:"10–15%",detail:"Round up or add 10–15%. For licensed black cabs in London, rounding up to the nearest pound plus change is standard."},
           {icon:"🚌",label:"Private Transfers",tip:"£5–15 per trip",detail:"£5–10 for airport runs. For full-day hires with a chauffeur, £15–25 is generous and appreciated."},
@@ -516,8 +517,10 @@
           <div class="cat-item${isOpen ? ' open' : ''}" data-key="${key}" role="button" aria-expanded="${isOpen}" tabindex="0">
             <div class="cat-row">
               <span class="cat-icon">${cat.icon}</span>
-              <span class="cat-label">${cat.label}</span>
-              <span class="cat-tip">${cat.tip}</span>
+              <div class="cat-text">
+                <span class="cat-label">${cat.label}</span>
+                <span class="cat-tip">${cat.tip}</span>
+              </div>
             </div>
             <div class="cat-detail">${cat.detail}</div>
           </div>`;
